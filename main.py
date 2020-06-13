@@ -6,7 +6,10 @@ import discord
 import random_lists
 import names
 import wizard
+<<<<<<< HEAD
 import sys
+=======
+>>>>>>> a7a5c78c6252e927cfbeb49002021fb78bf67eee
 
 # below: laziness
 from shared_functions import party as party
@@ -24,7 +27,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+<<<<<<< HEAD
 TOKEN = os.getenv("TOKEN")
+=======
+TOKEN = "yeah let's not put this in a public github"
+>>>>>>> a7a5c78c6252e927cfbeb49002021fb78bf67eee
 # Party & NPC Management
 
 def add_character(name):
@@ -65,6 +72,7 @@ def print_character(name, character=None):
   embed.add_field(name="__**Inventory**__", value=inventory_string)
   shared_functions.backup_characters() 
   return embed
+<<<<<<< HEAD
 
 # Temporary commands for world 3:
 
@@ -91,6 +99,8 @@ async def cool_ranch_shop(ctx):
 300 gold: **Fire Hose:** Use this to push your enemy back, denying them an attack for this turn. Requires a water source such as a lake or fire hydrant to use. Does 100 base damage to witches.
 800 gold: **Summon Tornado:** A book containing a powerful spell that will produce a tornado above the current location. This tornado will cause immense damage and may kill people. (This spell will not protect you from your own tornado. Use at your own risk.) 
 """)
+=======
+>>>>>>> a7a5c78c6252e927cfbeb49002021fb78bf67eee
  
 @bot.command(name='addchar')
 async def add_char(ctx, shortname, name, backstory=None, health=None, gold=None, strongness=None, smartness=None, coolness=None, trait1=None, trait2=None, blessing=None, inventory1=None, inventory2=None, inventory3=None):
@@ -520,10 +530,13 @@ async def random_item(ctx, modifier=0, number=1):
     else:
       await ctx.send(random.choice(random_lists.GodlyItems))
 
+<<<<<<< HEAD
 @bot.command(name='restart')
 async def restart(ctx):
     sys.exit()
 
+=======
+>>>>>>> a7a5c78c6252e927cfbeb49002021fb78bf67eee
 @bot.command(name='randchar')
 async def random_char(ctx, world=1, boss=False):
   if world <= 0:
