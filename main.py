@@ -520,12 +520,11 @@ async def advance(ctx, reset=False):
 
 @bot.command(name='randchar')
 async def random_char(ctx, boss=False):
-  world = world["number"]
   if boss:
     stat_cap = world["boss stat cap"]
   else:
     stat_cap = world["stat cap"]
-  if world <= 0:
+  if world["number"] <= 0:
     await ctx.send("Invalid world.")
     return
   global next_backstory
@@ -563,13 +562,13 @@ async def random_char(ctx, boss=False):
   gold = random.randint(0, stat_cap * 10)
   blessing_level = None
   blessing_roll = random.randint(1,20)
-  if blessing_roll <= world:
+  if blessing_roll <= world["number"]:
     blessing_level = "Level I"
     blessing_roll = random.randint(1,20)
-    if blessing_roll <= world:
+    if blessing_roll <= world["number"]:
       blessing_level = "Level II"
       blessing_roll = random.randint(1,20)
-      if blessing_roll <= world:
+      if blessing_roll <= world["number"]:
         blessing_level = "Level III"
   blessing_name = random.choice(random_lists.Blessings)
   if blessing_level is None:
@@ -596,11 +595,11 @@ async def random_char(ctx, boss=False):
   if boss:
     backstory = random.choice(random_lists.BossBackstories)
     trait1 = random.choice(random_lists.BossTraits)
-    health *= (5 * world)
-    gold *= (world * world)
+    health *= (5 * world["number"])
+    gold *= (world["number"] * world["number"])
     full_name = "*Boss:* " + full_name
     secondary_trait_roll = random.randint(1,20)
-    if secondary_trait_roll <= world:
+    if secondary_trait_roll <= world["number"]:
       trait2 = random.choice(random_lists.BossTraits)
       while trait1 == trait2:
         trait2 = random.choice(random_lists.BossTraits)
@@ -612,6 +611,17 @@ async def random_char(ctx, boss=False):
 @bot.command(name='randboss')
 async def random_boss(ctx):
   await random_char(ctx, True)
+
+@bot.command(name='encounter')
+async def encounter(ctx):
+  world_number = world["number"]
+  roll = random.randint(1,99)
+  if roll > 66:
+    await randnpc(ctx)
+  elif roll < world_number + 1:
+    await random_boss(ctx)
+  else:
+    await random_char(ctx)
 
 @bot.event
 async def on_message(message):
