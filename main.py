@@ -6,10 +6,7 @@ import discord
 import random_lists
 import names
 import wizard
-<<<<<<< HEAD
 import sys
-=======
->>>>>>> a7a5c78c6252e927cfbeb49002021fb78bf67eee
 
 # below: laziness
 from shared_functions import party as party
@@ -27,11 +24,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-<<<<<<< HEAD
 TOKEN = os.getenv("TOKEN")
-=======
-TOKEN = "yeah let's not put this in a public github"
->>>>>>> a7a5c78c6252e927cfbeb49002021fb78bf67eee
 # Party & NPC Management
 
 def add_character(name):
@@ -72,36 +65,7 @@ def print_character(name, character=None):
   embed.add_field(name="__**Inventory**__", value=inventory_string)
   shared_functions.backup_characters() 
   return embed
-<<<<<<< HEAD
 
-# Temporary commands for world 3:
-
-@bot.command(name='isisshop')
-async def isis_shop(ctx):
-  await ctx.send("""
-Free: **Koran**: The Islamic sacred book, believed to be the word of God as dictated to Muhammad by the archangel Gabriel and written down in Arabic.
-40 gold: **Tank Ammo**: An explosive that can only be used with a tank. Provides one shot.
-50 gold: **Suicide Vest**: When worn, replaces one of your traits with Terrorist. Cannot be taken off.
-100 gold: **Highly Flammable Barrel of Gasoline**: I don't know what you're planning to do with this, but it's probably a bad idea. 90 base damage when made to explode.
-1000 gold: **Tank**: A vehicle with 560 health and a 35 base damage attack. Riding inside of this vehicle causes it to take damage instead of you. Requires gasoline as fuel, consuming one barrel per area it travels. Requires explosives as ammunition. Neither of these items are included.""")
-
-@bot.command(name='nachocheeseshop')
-async def nacho_cheese_shop(ctx):
-  await ctx.send("""1 gold: **Nacho Cheese Dorito**: A single Nacho Cheese Dorito. Restores 1 health if eaten by someone with Blessing of Nacho Cheese. Does 1000 damage if eaten by someone with Blessing of Cool Ranch. 
-5 gold: **WEED Dorito**: A single Dorito, but infused with love (a.k.a. THC). The flavor is not Nacho Cheese or Cool Ranch; it is Weed Flavor. Bestows the Blazed effect when eaten, temporarily increasing Coolness by 3.
-75 gold: **Dorito Gun**: A ranged weapon that uses Doritos as ammo. Base damage is 1 against enemies without a Dorito blessing, -1 (heals) against enemies with the same Dorito flavor blessing, and 15 against enemies with a different Dorito flavor blessing. 
-659 gold: **Imagination Potion**: Bring your paranoid delusions to life!""")
-
-@bot.command(name='coolranchshop')
-async def cool_ranch_shop(ctx):
-  await ctx.send("""1 gold: **Cool Ranch Dorito:** A single Cool Ranch Dorito. Restores 1 health if eaten by someone with Blessing of Cool Ranch. Does 1000 damage if eaten by someone with Blessing of Nacho Cheese. 
-120 gold: **Desk:** A blunt weapon providing 2 base damage. Requires 5 Strongness to lift and use. 
-300 gold: **Fire Hose:** Use this to push your enemy back, denying them an attack for this turn. Requires a water source such as a lake or fire hydrant to use. Does 100 base damage to witches.
-800 gold: **Summon Tornado:** A book containing a powerful spell that will produce a tornado above the current location. This tornado will cause immense damage and may kill people. (This spell will not protect you from your own tornado. Use at your own risk.) 
-""")
-=======
->>>>>>> a7a5c78c6252e927cfbeb49002021fb78bf67eee
- 
 @bot.command(name='addchar')
 async def add_char(ctx, shortname, name, backstory=None, health=None, gold=None, strongness=None, smartness=None, coolness=None, trait1=None, trait2=None, blessing=None, inventory1=None, inventory2=None, inventory3=None):
   name = name.replace("±", " ")
@@ -530,13 +494,10 @@ async def random_item(ctx, modifier=0, number=1):
     else:
       await ctx.send(random.choice(random_lists.GodlyItems))
 
-<<<<<<< HEAD
 @bot.command(name='restart')
 async def restart(ctx):
     sys.exit()
 
-=======
->>>>>>> a7a5c78c6252e927cfbeb49002021fb78bf67eee
 @bot.command(name='randchar')
 async def random_char(ctx, world=1, boss=False):
   if world <= 0:
