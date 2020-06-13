@@ -1,0 +1,195 @@
+CRASH PROOFING
+  Changechar is missing basic KeyError checks, etc. It's kind of an aids command anyway though so.  
+
+  Lots of possible safeguards against crashes & error messages. 
+
+DRUNK COMMAND
+  Relevant to current game. Not too hard; add real stats to character sheet, requires increase and set change to also increase real stats.
+
+CHARACTER WIZARD
+  I would like to be able to support multiple characters from each player.
+
+  Once a player types %wizard. Here I'll give some sample output.
+
+  %wizard
+  Character creation wizard activated for @USER
+  What is your character's first name? (No spaces plz, I am a stupid robot and will have a mental breakdown)
+    joey the boss
+    Is reading not your strong suit??? I said no spaces!
+    joey
+  What is your character's full name?
+    joey the boss
+  What is your character's STRONGNESS? (There are 3 stats; they must add up to 11)
+    3
+  What is your character's SMARTNESS? 
+    -1
+      No
+    3
+  What is your character's COOLNESS?
+    3
+    Is math not your strong suit? 3 + 3 + 3 is 9, not 11. 
+  <redo>
+  Rolling for gold...27 starting gold selected.
+    silently set health
+  Rolling for random trait...
+  Rolling for trait options. Choose 1 of these 3 traits.
+    **Trait**: Description
+    joey: trait84tfasfasf
+    Maybe I am just a dumb robot who is dumb
+  Rolling for blessing options. Choose 1 of these 5 unlocked blessings. 
+
+  Starting item: <random>
+
+  I want this to be able to track in-progress wizards. Need a dictionary tracking character and current progress.
+
+  %wizard quit
+  Cancelling character wizard session for @USER.
+
+  Ok, what is needed for the basic functionality is:
+  last_wizard_message_processed: The last message in the wizard channel that the bot processed. After processing a message, the bot updates bot_data.json with this variable.  
+
+  When reactivating after reboot, the bot gets all messages via channel.history() after the message stored in last_wizard_message_processed. It reacts to one for each user. 
+
+  The wizard data is thus json dictionary of user id and character as well as an additional "character state" variable. Optional variables might also include "trait options" and "blessing options".
+
+  For this to work we need functioning trait and blessing jsons so...
+
+
+CHARACTER WIZARD BUGFIXES
+  This is done
+
+  Manually edit the JSON to have numeric data be numeric.
+
+  Edit the wizard to convert to int at all opportunities. Seems to be kind of an oversight since we int check. 
+
+  Ah it is the json conversion that is probably fucking us...Didn't we get Gold from randint? 
+
+  No the wizard is not at fault, I manually changed his gold. Edit wizard to have numeric values and then just deprecate changechar for numeric info. 
+
+
+CHARACTER SUBMISSION
+  For message in channel would be nice functionality.
+
+  Any way around ± would be nice tbqh...
+
+  Character saving being broken sux
+
+  Kinda want a wizard that outputs a json that I can just plug in. Would be ideal. Only issue is ppl grinding it for desired traits
+
+  Generation now needs a random color generator because json is gay and doesn't support hex numbers in an easy to understand way
+
+
+COMMAND ALIASES
+  %buy CHARACTER GOLD
+  %pay CHARACTER GOLD
+  
+  %increase CHARACTER STAT NUMBER
+  %decrease CHARACTER STAT NUMBER
+
+  Increase and decrease increase/decrease by the number. Remember to use int in their implementation. 
+
+  %heal CHARACTER (restores to max health)
+    Blessing of Bloat handling (and infinite health blessings) is needed here
+  %damage CHARACTER DAMAGE
+    The key part of this command is death handling. Probably best to save dead characters in a "THE FALLEN" json. 
+  
+  These are all implemented.
+
+STAT CHECK COMMANDS
+  CHECKS: Stat, character, enemy stat. 
+  Show nat 20s and nat 1s.
+
+  COMBAT: enemy STR, weapon modifier=1, stat=Strongness
+
+  Base damage without a weapon is 1. Damage done is modifier * (roll + stat difference - 10). Players have less health so bosses usually will not have 
+
+
+ITEMS
+  There is no command to add items right now, I believe. We need handling of empty slots in particular; reject item addition if all slots are full.
+
+  Party ultimately needs to be able to handle non-three inventory sizes too. 
+
+  Check all the new commands for backup_party() plz
+
+COMPLEX STUFF
+  - Variable inventory
+  - Hidden stats
+  - Temporary stat changes (ex. Drunk). This is important for stat checks. 
+  - Turn counters could be interesting too combined with above 
+  EMBED CHARACTER DISPLAY
+  Embed needs a little bit of special handling for variable sized inventory (not a big issue) and hidden stats (needs an "if" I suppose).
+
+  A lot of weird traits fuck up stat checks (ex. Blood Money interacts poorly with default combat)
+
+  Mary Sue should force rerolls, and stat increases should check and apply Mary Sue to Trait 1
+
+  Changing blessings and traits with spaces will require +- method. Alas. 
+
+RANDITEM
+  Ignore the below: we need just 6 lists of different qualities of items. We can have it read from a file and get a random line. The same applies for backstories, although it's prob better to have them as python lists if we want to avoid duplicates. 
+
+  Pull from one of six lists. We also need a global item database for use with %changechar
+
+  The way the item pool works is there are 6 sub categories of items; nat 1, 2 to 5, 6 to 10, 11 to 15, 16 to 19, nat 20. 
+
+  Very cursed / shit / mediocre / ok / great / god tier. World boosts affect the roll. Items are removed from pool after dropping. 
+
+  Bot needs extensive testing before being used in games -- no time for debug
+
+  Trait and item addition should go from a master list (json). Add key (no spaces) will add text to description 
+
+  A few items are not random but are based in world lore. I can allow item submission to pools by players.
+
+
+RANDCHARACTER
+  - Parameter WORLD (for stat generation, blessing chance)
+
+  Random stats, health and gold (depending on world). Stats are a randint from 0 to world + 4. 
+
+  Blessing chances increase by (5 + world) %. Given that a level 1 is pulled, a level 2 has the same chance, then 3.
+
+  This means world 10 has an absolutely vicious 1/8 chance of level 3 LOOOL. 
+
+  I should have 2 blessing lists. One is used by %changeblessing and %randchar and the other by the wizard. I'll implement a shitty randchar one for now. 
+
+  Backstories are pulled from a random pool of one line backstories. After being pulled, backstories will never reappear. 
+
+  Inventory is pooled from the random item pool. 
+
+  This is not too hard to implement now. 
+
+  RANDBOSS needs boss traits. 
+
+  Main todo for randcharacter, randitem, etc is random lists.
+
+RANDBOSS:
+  Needs a Boss Traits list, not too hard to import straight from google. Otherwise, it just pulls random stats (as if it were rand character) with a slightly higher total and a random amount of health (10 times what it normally would be?)
+
+RANDNPC:
+  Global NPC pool. Some management commands:
+
+  %npc name
+    Demotes a player from the party to npc-hood.
+  %recruit name
+    Promotes an NPC to the party.
+  
+  Add all of the heroes and any NPCs that have shown up before. 
+
+HERO HANDLING:
+  Track heroes and NPCs the same way we track party characters. Allow randhero to pull a hero at a whim. Allow heroes to be tied to individual worlds. Support heroes having unique blessing descriptions (not rly hard)
+  
+  This is the main todo right now once random character generator works. Goes hand in hand with dead chars and NPC tracking. %promote, %win, %herofy commands, %dehero adds hero to party, etc. 
+  . 
+
+DEAD CHARACTER HANDLING:
+  would be a shame to let some terrorist delete a character and not be able to back them up immediately
+
+BACKUPS
+  Corruption becomes a big issue once we have heroes and stuff stuck in 
+
+OTHER
+  Nothing has any documentation
+
+  I think try except loops are more efficiently handled by checking the keys list manually 
+
+Ultimately this needs massive restructuring not just to crack down on repeated code but also to delete any problems that may come up. Stuff like hardcoded max health is irrelevant 90% of the time but comes into play with, say, Blessing of Bloat, which wants a max_health function used instead. Adding edge cases thus helps open you up to possible restructures

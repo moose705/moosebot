@@ -1,0 +1,32 @@
+
+
+CLEANUP
+  There are likely still many issues with the code. Cyclohm complexity of wizard can be significantly decreased with simple moves to sub functions. There are too many functions in main.py; this needs modules. 
+
+  I need an import chain for modules to work, which is definitely not worth doing before bosses and advanced combat. 
+
+  addchartrait should use the changetrait mechanism. 
+
+  The main cleanup task left to do IS modular refactoring 
+
+  Wizard can be cleaned up further. Trait and blessing manager can be combined into one function with a simple blessing T or F parameter. 
+
+WORLD TRACKING
+  Global world counter
+
+  %advance triggers all trait events that are supposed to be world by world
+
+  A complex implementation could even track which world is being visited and roll for events (such as plague world having a chance to give all party members plague on entry )
+
+TRAIT & ITEM IMPLEMENTATION
+
+Blessings
+  Ogre I : %increase "Strongness" yields triple the normal gain. %ad
+  Chaos II : Should mangle traits. Maybe get random (nonsense) combination of existing trait descriptions
+  Bloat I : Should increase max health to be 100 times its normal value. 
+
+Items
+  A good starting point would be to have actual item objects instead of a description string. Converting the existing item database would be a pain though. 
+
+  If items had base damage atrributes, the Combat command could only take attacker and target, and it could automatically search their inventory for the highest base damage item, which could be overriden with a parameter (ex. to use a weaker item with a better secondary effect).
+    This doesn't really save the GM that much work, all it means is that I don't need to put in a weapon strength number to the combat command. 
