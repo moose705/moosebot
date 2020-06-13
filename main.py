@@ -11,6 +11,7 @@ import sys
 # below: laziness
 from shared_functions import party as party
 from shared_functions import npcs as npcs
+from shared_functions import world as world
 from shared_functions import next_backstory as next_backstory
 from shared_functions import next_name as next_name
 from shared_functions import next_short_name as next_short_name
@@ -298,6 +299,7 @@ async def check(ctx, name, stat, required_number, global_modifier=0):
   if stat not in character:
     await ctx.send(name + " has no stat " + stat)
     return
+  global_modifier += world["modifier"]
   roll = random.randint(1,20)
   print(roll)
   passed = False
@@ -335,6 +337,7 @@ async def combat(ctx, name, weapon_damage, target, global_modifier=0, stat="Stro
     await ctx.send("One of the numerical parameters was not a number.")
     return
   character = shared_functions.find_character(name)
+  global_modifier += world["modifier"]
   if not character:
     await ctx.send("No character named " + name)
     return
@@ -447,10 +450,11 @@ async def wipe_party(ctx):
   shared_functions.backup_party()
   await ctx.send("Successfully killed entire party.")
 
-@bot.command(name='retireparty')
+@bot.command(name='retireparty', aliases=["giveup", "win"])
 async def retire_party(ctx):
   for name in list(party.keys()):
     await leave(ctx, name)
+  await advance(ctx, 1)
   await ctx.send("Entire party has been retired.")
 
 @bot.command(name='inventorysize')
@@ -478,6 +482,7 @@ async def inventory_size(ctx, name, size):
 @bot.command(name='randitem')
 async def random_item(ctx, modifier=0, number=1):
   for i in range(0, number):
+    modifier += world["modifier"]
     roll = random.randint(1, 20)
     if roll != 1 and roll != 20:
       roll += modifier
@@ -496,15 +501,33 @@ async def random_item(ctx, modifier=0, number=1):
 
 @bot.command(name='restart')
 async def restart(ctx):
-    sys.exit()
+  sys.exit()
+
+@bot.command(name='go', aliases=['advance', 'nextworld'])
+async def advance(ctx, reset=False):
+  # future support: track actual world map position, take a direction as argument
+  world["number"] += 1
+  world["modifier"] = 1 - int(((world["number"] + 1)/2))
+  world["stat cap"] = world["number"] + 4
+  world["boss stat cap"] = world["number"] + 6
+  if reset:
+    world["number"] = 1
+    world["modifier"] = 1
+    world["stat cap"] = 5
+    world["boss stat cap"] = 7
+  shared_functions.backup_world(world)
+  await(ctx.send("World has been set to " + str(world["number"]) + " providing a boost of " + str(world["modifier"]) + " to all rolls."))
 
 @bot.command(name='randchar')
-async def random_char(ctx, world=1, boss=False):
+async def random_char(ctx, boss=False):
+  world = world["number"]
+  if boss:
+    stat_cap = world["boss stat cap"]
+  else:
+    stat_cap = world["stat cap"]
   if world <= 0:
-    # underworld
     await ctx.send("Invalid world.")
     return
-  stat_cap = world + 4
   global next_backstory
   global next_short_name
   global next_name
@@ -576,8 +599,6 @@ async def random_char(ctx, world=1, boss=False):
     health *= (5 * world)
     gold *= (world * world)
     full_name = "*Boss:* " + full_name
-    for stat in [strongness, smartness, coolness]:
-      stat += random.randint(0,2)
     secondary_trait_roll = random.randint(1,20)
     if secondary_trait_roll <= world:
       trait2 = random.choice(random_lists.BossTraits)
@@ -589,8 +610,8 @@ async def random_char(ctx, world=1, boss=False):
   shared_functions.backup_characters()
 
 @bot.command(name='randboss')
-async def random_boss(ctx, world=1):
-  await random_char(ctx, world, True)
+async def random_boss(ctx):
+  await random_char(ctx, True)
 
 @bot.event
 async def on_message(message):

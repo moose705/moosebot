@@ -17,6 +17,9 @@ def get_dict_from_json(name):
 
 party = get_dict_from_json("party.json")
 npcs = get_dict_from_json("npcs.json")
+world = get_dict_from_json("world.json")
+
+# refactor below into one or two functions taking name of json, name of dict
 
 def backup_party():
   json_file = open("party.json", "w")
@@ -39,6 +42,12 @@ def backup_wizards(wizards):
   wizards_json = open("wizards.json", "w")
   wizards_json.write(wizards_json_string)
   wizards_json.close()
+
+def backup_world(world):
+  json_file = open("world.json", "w")
+  json_string = json.dumps(world)
+  json_file.write(json_string)
+  json_file.close()
 
 next_name = None
 next_short_name = None
