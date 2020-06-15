@@ -60,6 +60,12 @@ def print_character(name, character=None):
   embed.add_field(name="**Gold**", value=character["Gold"])
   embed.add_field(name="__**Traits**__", value = character["Traits"][0] + "\n" + character["Traits"][1])
   embed.add_field(name="__**House**__", value=character["House"])
+#try character["Adult"]:
+    
+    #except KeyError:
+    #try character["Student"]:
+  
+#except KeyError:
   inventory_string = ""
   for item in character["Inventory"]:
     inventory_string += "- " + item + "\n"
@@ -412,6 +418,10 @@ async def npc(ctx, name=None):
   if not name:
     length = str(len(npcs.keys()))
     await ctx.send("There are currently " + length + " NPCs in the pool.")
+    return
+  elif name == "all":
+    for char in npcs:
+      await ctx.send(embed=print_character(char))
     return
   await ctx.send(embed=print_character(name))
 
