@@ -8,8 +8,6 @@ def stat_wizard(message, wizard_data):
     return "That doesn't seem like a number buddy."
   if stat < 0:
     return "Negative stats aren't allowed at character creation; please submit a zero or positive number"
-  if stat > 11:
-    return "The three stats have to add up to 11. How are they supposed to do that if one of them is already bigger than 11..."
   wizard_data[wizard_data["Phase"]] = stat
   if wizard_data["Phase"] == "Strongness":
     wizard_data["Phase"] = "Smartness"

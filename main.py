@@ -59,7 +59,7 @@ def print_character(name, character=None):
   embed.add_field(name="**Health**", value=character["Health"])
   embed.add_field(name="**Gold**", value=character["Gold"])
   embed.add_field(name="__**Traits**__", value = character["Traits"][0] + "\n" + character["Traits"][1])
-  embed.add_field(name="__**Blessing**__", value=character["Blessing"])
+  embed.add_field(name="__**House**__", value=character["House"])
   inventory_string = ""
   for item in character["Inventory"]:
     inventory_string += "- " + item + "\n"
@@ -661,7 +661,7 @@ async def on_message(message):
       elif phase == "Backstory":
         wizard_data["Backstory"] = message.content
         wizard_data["Phase"] = "Strongness"
-        await message.channel.send("What is your character's Strongness? (There are 3 stats; they must add up to 11.)")
+        await message.channel.send("What is your character's Strongness?")
       elif phase == "Strongness":
         await message.channel.send(wizard.stat_wizard(message, wizard_data))
       elif phase == "Smartness":
@@ -675,43 +675,71 @@ async def on_message(message):
         except KeyError:
           shared_functions.backup_wizards(wizards)
           return
-        if summ != 11:
+        """if summ != 11:
           await message.channel.send("Is math not your strong suit...? Those numbers add up to " + str(summ) + ", not 11!\n What is your character's Strongness?")
           wizard_data["Phase"] = "Strongness"
-          wizard_data.pop("Coolness")
+          wizard_data.pop("Coolness")"""
+        wizard_data["Phase"] = "Gold"
+        await message.channel.send("How much Gold does your character have?")
+      elif phase == "Gold":
+        try:
+          wizard_data["Gold"] = int(message.content)
+          wizard_data["Phase"] = "Health"
+          await message.channel.send("How much Health does your character have?")
+        except ValueError:
+          await message.channel.send("Stop messing with me...Everyone knows you can't have " + message.content + " gold.")
+      elif phase == "Health":
+        try:
+          wizard_data["Health"] = int(message.content)
+          wizard_data["Phase"] = "Trait1"
+          await message.channel.send("What is your character's first trait?")
+        except ValueError:
+          await message.channel.send("qsasfdasdfsdafasdf that isnt a number MY POOR ROBOT BRAIN WILL EXPLODE")
+      elif phase == "Trait1":
+          wizard_data["Traits"].append(message.content)
+          await message.channel.send("What is your character's second trait?")
+          wizard_data["Phase"] = "Trait2"
+      elif phase == "Trait2":
+        wizard_data["Traits"].append(message.content)
+        await message.channel.send("What is your character's House?")
+        #await message.channel.send("What is your character's House? Valid houses: \n **Gryffindor**: +2 STRONG, -3 SMART, +1 COOL \n **Hufflepuff**: +3 COOL, -2 SMART, -1 STRONG \n **Ravenclaw**: +3 SMART, -2 COOL, -1 STRONG \n **Slytherin**: +2 STRONG, +1 SMART, -3 COOL")
+        wizard_data["Phase"] = "House"
+      elif phase == "House":
+        if message.content not in ["Slytherin", "Hufflepuff", "Ravenclaw", "Gryffindor"]:
+          await message.channel.send("Invalid House. Pick one of Hufflepuff, Ravenclaw, Gryffindor or Slytherin.")
         else:
-          starting_gold = random.randint(0, 100)
-          await message.channel.send("Your character will start with " + str(starting_gold) + " Gold.")
-          wizard_data["Gold"] = starting_gold
-          wizard_data["Health"] = wizard_data["Strongness"] * 2 + 1
-          trait_dict = shared_functions.get_dict_from_json("traits.json")
-          random_trait = random.choice(list(trait_dict.keys()))
-          random_trait_string = "** " + random_trait + "**: " + trait_dict[random_trait]
-          wizard_data["Traits"].append(random_trait_string)
-          await message.channel.send(wizard.trait_wizard(message, wizard_data))
-      elif phase == "Traits":
-        await message.channel.send(wizard.trait_wizard(message, wizard_data))
-      elif phase == "Blessing":
-        wizard_response = wizard.trait_wizard(message, wizard_data)
-        if wizard_response:
-          await message.channel.send(wizard_response)
-          shared_functions.backup_wizards(wizards)
-          return 
-        await message.channel.send("Character creation wizard complete. Adding character to the party.")
-        character_dict = {"Name": wizard_data["Long name"],
+          if message.content == "Syltherin":
+            wizard_data["Strongness"] += 2
+            wizard_data["Smartness"] += 1
+            wizard_data["Coolness"] -= 3
+          elif message.content == "Hufflepuff":
+            wizard_data["Coolness"] += 3
+            wizard_data["Strongness"] -= 2
+            wizard_data["Smartness"] -= 1
+          elif message.content == "Ravenclaw":
+            wizard_data["Coolness"] += -2
+            wizard_data["Strongness"] -= 1
+            wizard_data["Smartness"] -= -3
+          elif message.content == "Gryffindor":
+            wizard_data["Coolness"] += 1
+            wizard_data["Strongness"] += 2
+            wizard_data["Smartness"] -= 3
+          wizard_data["House"] = message.content
+          await message.channel.send("Character creation wizard complete. Character has been added to NPC pool.")
+          character_dict = {"Name": wizard_data["Long name"],
            "Strongness": wizard_data["Strongness"], 
            "Coolness": wizard_data["Coolness"],
            "Smartness": wizard_data["Smartness"], 
            "Traits": wizard_data["Traits"],
            "Inventory": ["Empty Slot", "Empty Slot", "Empty Slot"],
-           "Blessing": wizard_data["Blessing"],
+           "House": wizard_data["House"],
            "Color": shared_functions.random_color(),
           "Health": wizard_data["Health"],
           "Gold": wizard_data["Gold"],
           "Backstory": wizard_data["Backstory"]}
-        party[wizard_data["Short name"]] = character_dict
-        shared_functions.backup_characters()
-        wizards.pop(user_discriminator)
+          npcs[wizard_data["Short name"]] = character_dict
+          shared_functions.backup_characters()
+          wizards.pop(user_discriminator)
   shared_functions.backup_wizards(wizards)
   await bot.process_commands(message)
 
