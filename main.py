@@ -264,7 +264,8 @@ async def damage(ctx, name, number):
   await decrease(ctx, name, "Health", number)
   character = shared_functions.find_character(name)
   if character and character["Health"] < 0:
-    await kill_char(ctx, name)
+    await ctx.send(name + " has been KO'd!")
+    #await kill_char(ctx, name)
 
 @bot.command(name='heal', aliases=["restore"])
 async def heal(ctx, name, number=None):
@@ -651,21 +652,23 @@ async def on_message(message):
         if message.content == "%wizard":
           ping = message.author.mention
           await message.channel.send("Character creation wizard activated for " + ping)
-          wizards[user_discriminator] = {"Phase" : "Short name"}
-          await message.channel.send("What is your character's first name? (No spaces plz, I am a stupid robot and will have a mental breakdown)")
+          wizards[user_discriminator] = {"Phase" : "Long name"}
+          await message.channel.send("What is your character's full name? (Spaces allowed)")
           shared_functions.backup_wizards(wizards)
         return
       wizard_data = wizards[user_discriminator]
-      if phase == "Short name":
+      """if phase == "Short name":
         if " " in message.content:
           await message.channel.send("I said no spaces! How hard is it to follow basic instructions?")
         else:
           wizard_data["Short name"] = message.content
           wizard_data["Phase"] = "Long name"
           wizard_data["Traits"] = []
-          await message.channel.send("What is your character's full name? (Spaces allowed)")
-      elif phase == "Long name":
+          await message.channel.send("What is your character's full name? (Spaces allowed)")"""
+      if phase == "Long name":
         wizard_data["Long name"] = message.content
+        wizard_data["Short name"] = message.content.split(" ")[0]
+        wizard_data["Traits"] = []
         wizard_data["Phase"] = "Backstory"
         await message.channel.send("What is your character's backstory?")
       elif phase == "Backstory":
