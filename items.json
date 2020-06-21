@@ -1,764 +1,1654 @@
 {
-  "**Age Changer**": {
-    "description": " Change your age on demand!",
+  "Age Changer": {
+    "description": " Provides immunity to age-related debuffs, such as instant death from the Coronavirus trait.",
+    "teaser": " Change your age on demand!",
     "damage": 1,
     "quality": 4,
     "uses": -1
   },
-  "**Alchemy Kit**": {
+  "Alchemy Kit": {
     "description": " One-use item that allows you to combine two other items. Results are not guaranteed to be useful.",
+    "teaser": "Combine any two items!",
     "damage": 1,
     "quality": 3,
     "uses": 1
   },
-  "**Amazon (TM) Star Blaster**": {
+  "Amazon (TM) Star Blaster": {
     "description": " A rather cheap star blaster providing 2 base damage when used as a ranged weapon.",
+    "teaser": "A standard star blaster.",
     "damage": 2,
     "quality": 3,
     "uses": -1
   },
-  "**Amazon Company Policy / Executive Decree**": {
+  "Amazon Company Policy / Executive Decree": {
     "description": " Allows you to fire any party member from Amazon. They will no longer receive their Amazon paycheck. Can be used multiple times.",
+    "teaser": "Think of the power one could wield with this...",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Antifreeze**": {
+  "Antibiotic": {
+    "description": " Cures bacterial infections.",
+    "teaser": "Finally, I can get rid of my plague!",
+    "damage": 1,
+    "quality": 2,
+    "uses": 1
+  },
+  "Antifreeze": {
     "description": " Drinking this makes you immune to cold for the rest of your life.",
+    "teaser": "No freezing allowed.",
     "damage": 1,
     "quality": 0,
     "uses": 1
   },
-  "**Aspirin**": {
-    "description": " Restores 3 health. One-use.",
+  "Aspirin": {
+    "description": "Restores 3 health. One-use.",
+    "teaser": "The end-all solution to literally any problem.",
     "damage": 1,
-    "quality": 3,
+    "quality": 2,
     "uses": 1
   },
-  "**BDSM In A Healthy Relationship -  The Official Guidebook": {
+  "Atheist's Sword": {
+    "description": "A weapon with base 1 damage against characters without god blessings, 10 against characters with Level I, 100 with Level II, 1000 with Level III, and 10000 against the gods themselves. Be warned that gods tend to have extremely high stats; this weapon is not enough to make it possible to kill one by itself.",
+    "teaser": "Gods aren't real, silly!",
     "damage": 1,
-    "description": "** Help! My boyfriend wants me to tie him up, and it's making me uncomfortable!",
+    "quality": 5,
+    "uses": -1
+  },
+  "BDSM In A Healthy Relationship -  The Official Guidebook": {
+    "damage": 1,
+    "description": "Reading this book will prevent members of the party from tying up other members of the party without their consent.",
+    "teaser": "Help! My boyfriend wants me to tie him up, and it's making me uncomfortable!",
     "quality": 1,
     "uses": -1
   },
-  "**Baseball Slinger**": {
-    "description": " A ranged weapon using baseballs as ammo. 4 base damage. Fires them *very fast*.",
+  "Bad Idea Generator": {
+    "description": "When used, prints out a terrible action to take in the current situation. ",
+    "teaser": "Bad Idea #1: Using this item",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Bag of Multipurpose Bullets": {
+    "description": " Provides 1000 bullets which are usable with practically any gun that uses bullets, ensuring you will never run out of ammo again. ",
+    "teaser": "",
+    "damage": 1,
+    "quality": 4,
+    "uses": -1
+  },
+  "Bagpipes": {
+    "description": "If you have the Scottish trait, this boosts your Coolness by 2, because everyone knows bagpipes are cool.",
+    "teaser": "A very fun musical instrument.",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Bagpipes": {
+    "description": "If you have the Scottish trait, this boosts your Coolness by 2, because everyone knows bagpipes are cool.",
+    "teaser": "A very fun musical instrument.",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Baseball Slinger": {
+    "description": " A ranged weapon using baseballs as ammo. 4 base damage. Fires them very fast.",
+    "teaser": "After the invention of this item, pitchers were rendered obsolete. ",
     "damage": 4,
     "quality": 5,
     "uses": 0
   },
-  "**Batteries**": {
+  "Batteries": {
     "description": " Power any electronic item! (Will eventually run out depending on item's power consumption.)",
+    "teaser": " It's difficult to resist the urge to eat these.",
     "damage": 1,
     "quality": 5,
     "uses": -1
   },
-  "**Battering Ram**": {
+  "Battering Ram": {
     "description": " A medieval siege weapon. Requires party members with 30 combined Strongness or an army size of at least 10 to use. Destroys any building; 30 base damage when used as a weapon.",
+    "teaser": "Walls be damned!",
     "damage": 30,
     "quality": 2,
     "uses": -1
   },
-  "**Beethoven's unfinished Tenth Symphony": {
-    "description": "** If the player finds it and completes it, Beethoven appears and rewards the player with the magic flute and music lessons that gain the player the Musician trait. Doing so requires a Smartness check with a base modifier of -18.",
+  "Beethoven's unfinished Tenth Symphony": {
+    "description": " If the player finds it and completes it, Beethoven appears and rewards the player with the magic flute and music lessons that gain the player the Musician trait. Doing so requires a Smartness check with a base modifier of -18.",
+    "teaser": "Why couldn't he just finish it, now I can never be satisfied. ",
     "damage": 1,
     "quality": 5,
     "uses": 1
   },
-  "**Big Java Action Figure**": {
-    "description": " I want to be just like Big Java when I grow up!",
+  "Bhagavad Gita -- Part 2": {
+    "description": "Reading this book increases Strongness by 1, because it takes great strength to get through bad fanfiction. Can be used on the entire party. ",
+    "teaser": "Someone's weird fanfiction about Arjun.",
+    "damage": 1,
+    "quality": 4,
+    "uses": -1
+  },
+  "Bhagavad Gita": {
+    "description": "Reading this book fills you with wisdom and increases Smartness by 1. It can be passed around to the entire party.",
+    "teaser": "A Hindu scripture about a man named Arjun who has a conversation with a god, or something like that.",
+    "damage": 1,
+    "quality": 4,
+    "uses": -1
+  },
+  "Big Java Action Figure": {
+    "description": "Showing this item to Big Java will cause him to join the party.",
+    "teaser": "I want to be just like Big Java when I grow up!",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Blob-Be-Gone Hose": {
-    "description": "** This hose squirts a magical substance that is completely harmless unless you are either a giant Green Blob or a giant Pink Blob. If this hose is used to attack either a giant Green Blob or a giant Pink Blob, the Blob dissolves and dies. Woohoo!",
+  "Blessed Wand": {
+    "description": "Has one of the three following effects, chosen at random: - \n'Bloat': Fattens and immobilizes an enemy, preventing them from attacking for this turn. Your health is halved.\n 'Domination': Forces one enemy to join the party, but their stats become yours, and your stats are halved. \n'Argument': Unleashes a 10 base damage attack using your Smartness. Your Strongness becomes 1.",
+    "teaser": "This wand will say 'Bless You' whenever anyone sneezes. What a good friend!",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Blob-Be-Gone Hose": {
+    "description": " This hose squirts a magical substance that is completely harmless unless you are either a giant Green Blob or a giant Pink Blob. If this hose is used to attack either a giant Green Blob or a giant Pink Blob, the Blob dissolves and dies. Woohoo!",
+    "teaser": "Whoever made this clearly isn't beautiful enough and decided to take their jealousy out on innocent blobs...",
     "damage": 1,
     "quality": 5,
     "uses": -1
   },
-  "**Blu-Ray Player**": {
-    "description": " Plays Blu-Ray discs, so you can watch classics like Grown Ups 2 and Shrek 5.",
+  "Blu-Ray Player": {
+    "description": "This item allows any Blu-Ray disc item to be used by any member of the party.",
+    "teaser": "Plays Blu-Ray discs, so you can watch classics like Grown Ups 2 and Shrek 5.",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Bone**": {
+  "Bone": {
     "description": " Distracts any canine foe. No dog will ever maul you as long as you have this!",
+    "teaser": "Whose bone is this???",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Boxing Gloves of Fury": {
-    "description": "** These boxing gloves gives you 4 base damage for all attacks, but if a crit 1 is ever rolled when using this item (shown as a miss by the combat command), the player using this item immediately shatters their entire body and dies.",
+  "Boss Summoner": {
+    "description": "Immediately summons a random boss to the current location.",
+    "teaser": "Why would you want this??",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "Boss Trait Stealer": {
+    "description": "A one-use item. During a boss battle, it steals a Boss Trait and applies its effect to the boss instead of the party. ",
+    "teaser": "Just don't steal that one boss trait that lets the boss be recruited, lest the boss convince everyone to join its party.",
+    "damage": 1,
+    "quality": 5,
+    "uses": 1
+  },
+  "Boxcar of Weapons and Ammo": {
+    "description": "Allows you store as many weapons as you want, but requires 10 Strongness to lug around.",
+    "teaser": "Thomas didn't realize he was carrying illegal weapons across the border until he was arrested.",
+    "damage": 1,
+    "quality": 3,
+    "uses": -1
+  },
+  "Boxing Gloves of Fury": {
+    "description": " These boxing gloves gives you 4 base damage for all attacks, but if a crit 1 is ever rolled when using this item (shown as a miss by the combat command), the player using this item immediately shatters their entire body and dies.",
+    "teaser": "Your fists will fly like jet planes, for better or for worse.",
     "damage": 4,
     "quality": 3,
     "uses": -1
   },
-  "**Bud**": {
+  "Bud": {
     "description": " If you have some sort of lighter, this can get you high, decreasing Strongness and increasing Coolness.",
+    "teaser": "Finally! I've been dying for some good weed for ages!",
     "damage": 1,
     "quality": 2,
     "uses": -1
   },
-  "**Butt-Chin**": {
-    "description": " What is with all these body parts just randomly laying around!!! Who is doing this!!!",
+  "Butt-Chin": {
+    "description": "This item is completely useless. Why did you even pick it up?",
+    "teaser": "What is with all these body parts just randomly laying around!!! Who is doing this!!!",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Cansword**": {
+  "Cansword": {
     "description": "0 base damage, but it gives anyone who touches the blade cancer. Is most definitely radioactive. For example, if it hits the chest, you get breast or lung cancer. Head is brain cancer, etc...",
+    "teaser": "A green glowing blade. It doesn't look very sharp. ",
     "damage": 0,
     "quality": 5,
     "uses": -1
   },
-  "**Curl Communicator": {
-    "description": " Broadcasts how many curl-ups you can do to everyone around you. (If your Strongness is greater than 9, increases Coolness by 1.)",
-    "damage": 1,
-    "quality": 2,
-    "uses": -1
-  },
-  "**Cell Battery**": {
+  "Cell Battery": {
     "description": " Power any electronic item for one use!",
+    "teaser": "Is this some sort of weird candy?",
     "damage": 1,
     "quality": 4,
     "uses": -1
   },
-  "**Census Reader**": {
+  "Census Reader": {
     "description": " One-use. Reveals information on 3 random NPCs that are somewhere in the current world. Does not reveal where they are.",
+    "teaser": "Hacks into the government census records and does shady things.",
     "damage": 1,
     "quality": 3,
     "uses": -1
   },
-  "**Chainsaw**": {
+  "Chainsaw": {
     "description": " Requires batteries. 16 base damage weapon.",
+    "teaser": "BRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR",
     "damage": 16,
     "quality": 4,
     "uses": -1
   },
-  "**Chaotic Cookie**": {
+  "Chaotic Cookie": {
     "damage": 1,
     "description": " Eating this cookie changes your Blessing to Blessing of Chaos or upgrades your existing Blessing of Chaos.",
+    "teaser": "Whoever cooked this plainly has no idea how to make a cookie.",
     "quality": 0,
     "uses": -1
   },
-  "**Charity Basket**": {
+  "Charity Basket": {
     "description": " Picking up this basket changes your Blessing to Blessing of Gifts or upgrades your existing Blessing of Gifts.",
+    "teaser": "What could be in this basket? The suspense is killing me!",
     "damage": 1,
     "quality": 0,
     "uses": -1
   },
-  "**Chili's All You Can Eat Coupon": {
-    "description": "** If you can get this to Chili's, you are going to get so much food.",
+  "Chili's All You Can Eat Coupon": {
+    "description": "When used, any food item that appears in a Chili's shop for the duration of the time the party is in Chili's can be bought for free.",
+    "teaser": "If you can get this to Chili's, you are going to get so much food.",
     "damage": 1,
     "quality": 4,
     "uses": -1
   },
-  "**Chili's Flag**": {
-    "description": " Woo! Chili's! This will definitely get you cred if you go there.",
+  "Chili's Flag": {
+    "description": "Lowers the prices of all items in the Chili's shop by 10 gold. Prices will not go below 1.",
+    "teaser": "Woo! Chili's! This will definitely get you cred if you go there.",
     "damage": 1,
     "quality": 2,
     "uses": -1
   },
-  "**Coffee**": {
-    "description": " Increases Strongness and Smartness by 1 for the duration of the world when drank.",
-    "damage": 1,
-    "quality": 3,
-    "uses": 1
-  },
-  "**Comfy Chair**": {
-    "description": " The most dreaded torture device ever conceived. If a player finds the comfy chair or starts off with it, the Spanish Inquisition immediately appears and begins to torture the player in various evil ways such as leaving the AC on at 71 instead of 72.",
+  "Chill Pill": {
+    "description": "When taken, causes someone to chill out and leave the party.",
+    "teaser": "Just relax, bro...",
     "damage": 1,
     "quality": 1,
-    "uses": -1
+    "uses": 1
   },
-  "**Communist Manifesto**": {
-    "description": " Reading this book increases Smartness by 3 and replaces your first trait with Communist.",
+  "Cloning Machine": {
+    "description": " Given a DNA sample of someone, produces clones of them. Requires batteries. Produces 5 clones per set of batteries. Clones will be confused upon emerging and will follow simple instructions.",
+    "teaser": "You had to make another one?? They were annoying enough already!",
     "damage": 1,
     "quality": 4,
     "uses": -1
   },
-  "**Concrete Slab**": {
+  "Coffee": {
+    "description": " Increases Strongness and Smartness by 1 for the duration of the world when drank.",
+    "teaser": "Crack in liquid form.",
+    "damage": 1,
+    "quality": 3,
+    "uses": 1
+  },
+  "Collector's Edition Guinness Beer Stein": {
+    "description": "This stein is magical and will automatically refill when its effect wears off. As long as this item is in your inventory, you are permanently Drunk. It is impossible to resist.",
+    "teaser": "Can be filled with liquid to have a nice drink.",
+    "damage": 1,
+    "quality": 3,
+    "uses": -1
+  },
+  "Comfy Chair": {
+    "description": "If a player finds the comfy chair or starts off with it, the Spanish Inquisition immediately appears and begins to torture the player in various evil ways such as leaving the AC on at 71 instead of 72.",
+    "teaser": "The most dreaded torture device ever conceived.",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Communist Manifesto": {
+    "description": " Reading this book increases Smartness by 3 and replaces your first trait with Communist.",
+    "teaser": "Karl Marx and his boyfriend wrote this book a long time ago.",
+    "damage": 1,
+    "quality": 4,
+    "uses": -1
+  },
+  "Concrete Slab": {
     "description": " 10 base damage weapon. It is very heavy so it requires 20 Strongness to use.",
+    "teaser": "This doesn't look very edible...",
     "damage": 10,
     "quality": 1,
     "uses": -1
   },
-  "**Conditioner**": {
+  "Conditioner": {
     "description": " Style your hair and become cooler looking! Unfortunately, it's almost empty. (+1 coolness for duration of world. 5 uses.)",
+    "teaser": "It resembles the consistency of yogurt. I wonder if it tastes like yogurt?",
     "damage": 1,
     "quality": 3,
     "uses": 5
   },
-  "**Conspiracy Theorist's Bat**": {
+  "Conscription Order": {
+    "description": "Finding this item triggers the effect, even if you don't pick it up. If there is a war in the current world, you must fight on a randomly selected side and cannot leave until it ends; otherwise, your character must leave the party and go to a different world with a war in it to fight.",
+    "teaser": "Uh-oh. It looks like you've been drafted. Time to die in a war you don't care about I guess!",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "Conspiracy Theorist's Bat": {
     "description": " A good weapon for an aspiring conspiracy theorist. This bat (2 base damage) reveals information about the enemy it attacks, and then makes conclusions based off of that information. The only issue is that the conclusions are always wrong\u2026",
+    "teaser": "Your grandpa keeps a bat just like this in his basement so he can beat any lizard people who show up at his door.",
     "damage": 2,
     "quality": 2,
     "uses": -1
   },
-  "**Corruption Sphere**": {
+  "Cool Kid Glasses": {
+    "description": "When equipped, increases your Coolness by 1 during checks against children.",
+    "teaser": "guys im so cool i play fortnite and have airpods. why wont anyone be my friend",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Cool Ranch Dorito": {
+    "description": "A single Cool Ranch Dorito. Restores 1 health if eaten by someone with Blessing of Cool Ranch. Does 1000 damage if eaten by someone with Blessing of Nacho Cheese. ",
+    "teaser": "Cool Ranch is obviously the superior flavor. Who the hell likes Nacho Cheese?",
+    "damage": 1,
+    "quality": 2,
+    "uses": 1
+  },
+  "Cop's Gun": {
+    "description": " A 14 base damage ranged weapon. The guns are specifically programmed not to fire unless the user has a police badge. Comes with 20 bullets.",
+    "teaser": "Now you can commit gratuitous acts of police violence!",
+    "damage": 14,
+    "quality": 3,
+    "uses": 20
+  },
+  "Corruption Sphere": {
     "description": " One-use. Makes the world around you shittier.",
+    "teaser": "Scientists are 99% sure that this item is not edible.",
     "damage": 1,
     "quality": 1,
     "uses": 1
   },
-  "**Counterfeit Gold Bag**": {
+  "Counterfeit Gold Bag": {
     "description": " Gives you 500 Gold. Spending this gold has a 1 in 9 chance of getting you arrested.",
+    "teaser": "Who could turn down FREE MONEY????",
     "damage": 1,
     "quality": 2,
     "uses": 1
   },
-  "**Curl Communicator**": {
+  "Curl Communicator": {
     "description": " Broadcasts how many curl-ups you can do to everyone around you. (If your Strongness is greater than 9, increases Coolness by 1.)",
-    "damage": 1,
-    "quality": 2,
-    "uses": 1
-  },
-  "**Dead Magic**": {
-    "description": " Cast a magic spell of your choice! A random party member will die every time this item is used. The party member chosen can be the user.",
-    "damage": 1,
-    "quality": 0,
-    "uses": -1
-  },
-  "**Diamond Ring": {
-    "description": "** Can be sold for a high price at shops.",
-    "damage": 1,
-    "quality": 3,
-    "uses": -1
-  },
-  "**Dr. Krab's Secret Formula Cocaine": {
-    "description": "** Item is instantly consumed when equipped, causes -3 health to user, and causes+1 coolness and +2 imagination to user. After the player survives any combat for the remainder of the game, a roll is made to see if the effects of this item repeat since the user becomes distressed as a side effect of the item. A roll of 10 or lower will repeat the effects of the item. This item can result in the user spontaneously dying after a battle if health is reduced to 0 or below, and if the user somehow reaches at least 10 imagination, they will begin hallucinating Spongebob, who will give the player -3 intelligence and +3 strength.",
-    "damage": 1,
-    "quality": 3,
-    "uses": 1
-  },
-  "**Expired Protein Powder**": {
-    "description": " Mmm, tasty!",
-    "damage": 1,
-    "quality": 0,
-    "uses": 1
-  },
-  "**Faithful Salmon**": {
-    "description": " This fish is a loyal pet who will do anything for you. Except leave the water.",
+    "teaser": "This one-of-a-kind device speaks the language of abs.",
     "damage": 1,
     "quality": 2,
     "uses": -1
   },
-  "**Flower": {
-    "description": "** A fragrant flower. Maybe try giving this to someone you love?",
-    "damage": 1,
-    "quality": 1,
-    "uses": -1
-  },
-  "**Fortnite Burger**": {
-    "description": " Can I get, an, uhhhhhhh.......Fortnite burger?",
-    "damage": 1,
-    "quality": 1,
-    "uses": 1
-  },
-  "**Fossil Finding Kit": {
-    "description": " Lets you find fossils, which is obviously the greatest ability in the world.**",
-    "damage": 1,
+  "DNA Sampler": {
+    "description": " A melee weapon with 0 physical damage. Grants a DNA Strand of its target that can be used with a cloning machine.",
+    "teaser": "Did your little sword just pull the hair off my arm???",
+    "damage": 0,
     "quality": 2,
     "uses": -1
   },
-  "**Freckle Remover**": {
-    "description": " Removes your freckles. One-use. (Increases Coolness by 1.)",
-    "damage": 1,
-    "quality": 3,
-    "uses": 1
-  },
-  "**GoFundMe Starter Kit**": {
-    "description": " Allows the user to start a virtual campaign on the site GoFundMe. If they pass a coolness check, they will receive a random amount of gold between 0 and 500.",
-    "damage": 1,
-    "quality": 4,
-    "uses": 1
-  },
-  "**Goat**": {
-    "description": " A useless pet to get lost and eat things on your journey.",
-    "damage": 1,
-    "quality": 1,
-    "uses": -1
-  },
-  "**Good Idea Generator**": {
-    "description": " One-use item that prints out a good action to take in the current situation.",
-    "damage": 1,
-    "quality": 3,
-    "uses": 1
-  },
-  "**Grown Ups 2 Blu-Ray**": {
-    "description": " Watching this movie reduces Smartness to 0.",
-    "damage": 1,
-    "quality": 1,
-    "uses": -1
-  },
-  "**Gustavo Flash Drive**": {
-    "description": " A flash drive containing the entirety of Gustavo and the Quest for Spaghetti. Seeing Gustavo causing the player to tear their eyes out in shear terror, with the blind trait replacing one of their original traits and suicidal trait replacing the other. If the player is willing to read a randomly selected chapter of Gustavo (0 to 9) and can pass a simple quiz on it, their character suffers no ill effects.",
+  "Dead Horse": {
+    "description": "Beating this item will grant or upgrade Blessing of Insanity.",
+    "teaser": "Give it a break! It's been dead for three hours!",
     "damage": 1,
     "quality": 0,
     "uses": -1
   },
-  "**HOG for President Pin**": {
-    "description": " Gives the wearer +1 in all stats and raises health 25% (round down if decimal occurs). Also, this pin pisses off anyone named JOG. Not a power this item has, just an observation and truth.",
+  "Dead Magic": {
+    "description": "A 35 base damage weapon. A random party member will die every time this item is used. The party member chosen can be the user.",
+    "teaser": "The energy of many witches burned at the stake is imbibed in these spells.",
+    "damage": 35,
+    "quality": 0,
+    "uses": -1
+  },
+  "Desk": {
+    "description": "A blunt weapon providing 2 base damage. Requires 5 Strongness to lift and use.",
+    "teaser": "The day Jimmy stole the desk from his 4th grade classroom went down in infamy for the rest of the school year.",
+    "damage": 2,
+    "quality": 2,
+    "uses": -1
+  },
+  "Destroyer of Unbelievers": {
+    "description": "A melee weapon with 19 base damage against anyone without a God blessing and 0 against anyone with one.",
+    "teaser": "Those who do not believe will be punished in the ninth circle.",
+    "damage": 0,
+    "quality": 5,
+    "uses": -1
+  },
+  "Diamond Ring": {
+    "description": " Can be sold for a high price at shops.",
+    "teaser": "I've never tasted the clear flavor of those candy rings. I wonder what it's like?",
+    "damage": 1,
+    "quality": 3,
+    "uses": -1
+  },
+  "Dorito Gun": {
+    "description": " A ranged weapon that uses Doritos as ammo. Base damage is 1 against enemies without a Dorito blessing, -1 (heals) against enemies with the same Dorito flavor blessing, and 15 against enemies with a different Dorito flavor blessing. ",
+    "teaser": "Why are you wasting innocent Doritos like this?",
+    "damage": 1,
+    "quality": 3,
+    "uses": 0
+  },
+  "Dr. Krab's Secret Formula Cocaine": {
+    "description": " Item is instantly consumed when equipped, causes -3 health to user, and causes+1 coolness and +2 imagination to user. After the player survives any combat for the remainder of the game, a roll is made to see if the effects of this item repeat since the user becomes distressed as a side effect of the item. A roll of 10 or lower will repeat the effects of the item. This item can result in the user spontaneously dying after a battle if health is reduced to 0 or below, and if the user somehow reaches at least 10 imagination, they will begin hallucinating Spongebob, who will give the player -3 intelligence and +3 strength.",
+    "teaser": "Coffee in powder form.",
+    "damage": 1,
+    "quality": 3,
+    "uses": 1
+  },
+  "Dragon Scale": {
+    "description": "Holding three of these scales transforms you into a dragon, increasing your Strongness and Coolness by 8 and giving you the ability to breathe fire (a 14 base damage ranged attack). This item contains only one scale.",
+    "teaser": "This was once part of a badass dragon. With a little bit of super glue, it can now be part of you!",
     "damage": 1,
     "quality": 5,
     "uses": -1
   },
-  "**Heaven's Blade**": {
+  "Drumset": {
+    "description": "Increases Strongness by 3, but only if you have Blessing of Drumming or Blessing of Boy Band.",
+    "teaser": "I'm Chad Smith guys!",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Dumpster": {
+    "description": "It's filled with garbage. You can open it and discover 5 items, generated with a -15 modifier.",
+    "teaser": "Do you ever want to just sit in garbage and be with your kin? This is the item for you.",
+    "damage": 1,
+    "quality": 1,
+    "uses": 1
+  },
+  "Duplication Exploit": {
+    "description": " Consumable. Clones the first item in your inventory into the two other slots, unless this item is the first item in your inventory.",
+    "teaser": "What a great item. What a great item. What a great item. What a great item. What a great item.",
+    "damage": 1,
+    "quality": 3,
+    "uses": 1
+  },
+  "El Dorado Party Murdering Space Blaster": {
+    "description": "A ranged weapon. Deals 12 base damage to party members. Deals 0 base damage to everyone else.",
+    "teaser": "Unless you plan on PvPing, I don't think this gun is going to be too useful.",
+    "damage": 0,
+    "quality": 0,
+    "uses": -1
+  },
+  "Electric Pentagram": {
+    "description": " Performing any sacrifice inside the pentagram will reward you with an amount of batteries corresponding to the worth of the sacrifice.",
+    "teaser": "I knew electric guitars were satanic!",
+    "damage": 1,
+    "quality": 3,
+    "uses": -1
+  },
+  "Expired Protein Powder": {
+    "description": "Has a 5% chance to double your Strongness and a 95% chance to reduce it by 1.",
+    "teaser": "Mmm, tasty!",
+    "damage": 1,
+    "quality": 0,
+    "uses": 1
+  },
+  "Faithful Salmon": {
+    "description": " This fish is a loyal pet who will do anything for you. Except leave the water.",
+    "teaser": "Who needs a dog when you have this guy?",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Fire Hose": {
+    "description": "Use this to push your enemy back, denying them an attack for this turn. Requires a water source such as a lake or fire hydrant to use. Does 100 base damage to witches.",
+    "teaser": "Hose time!",
+    "damage": 1,
+    "quality": 3,
+    "uses": 0
+  },
+  "Flower": {
+    "description": "Tames any bee enemy.",
+    "teaser": "A fragrant flower. Maybe try giving this to someone you love?",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Fortnite Burger": {
+    "description": "Restores 1 health when eaten.",
+    "teaser": "Can I get, an, uhhhhhhh.......Fortnite burger?",
+    "damage": 1,
+    "quality": 1,
+    "uses": 1
+  },
+  "Fossil Finding Kit": {
+    "description": "Finds 1 fossil per world for use with the Fossil Maniac trait.",
+    "teaser": "I LOOOOOVE FOSSILS!",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Freckle Remover": {
+    "description": "Increases Coolness by one.",
+    "teaser": "Removes your freckles. One-use.",
+    "damage": 1,
+    "quality": 3,
+    "uses": 1
+  },
+  "Giant Lipstick": {
+    "description": "Applying this item grants or upgrades Blessing of Makeup.",
+    "teaser": "Now you can have lips as big as Kim Kardashian's!",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "GoFundMe Starter Kit": {
+    "description": "When used, a coolness check (6) is performed by the user. If it passes, they will receive a random amount of gold between 0 and 500.",
+    "teaser": "Allows the user to start a virtual campaign on the site GoFundMe.",
+    "damage": 1,
+    "quality": 4,
+    "uses": 1
+  },
+  "Goat": {
+    "description": "A useless pet. When you perform any check, has a 10% chance to randomly consume one of the other items in your inventory and a 1% chance to get lost forever. The goat will suffer no ill effects from eating cursed items.",
+    "teaser": "Goat simulator is a documentary on what this amazing dude can do.",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Good Idea Generator": {
+    "description": " One-use item that prints out a good action to take in the current situation.",
+    "teaser": "You never need to think again once you've got this bad boy.",
+    "damage": 1,
+    "quality": 3,
+    "uses": 1
+  },
+  "Grown Ups 2 Blu-Ray": {
+    "description": "Watching this movie reduces Smartness to 0. A Blu-Ray player is required.",
+    "teaser": "Grown Ups was a classic. I can't wait to see how good the sequel is!",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Gullible Pill": {
+    "description": "When consumed, changes one of your traits to Gullible. ",
+    "teaser": "Is this just a placebo?",
+    "damage": 1,
+    "quality": 1,
+    "uses": 1
+  },
+  "Gustavo Flash Drive": {
+    "description": " A flash drive containing the entirety of Gustavo and the Quest for Spaghetti. Seeing Gustavo causing the player to tear their eyes out in shear terror, with the blind trait replacing one of their original traits and suicidal trait replacing the other. If the player is willing to read a randomly selected chapter of Gustavo (0 to 9) and can pass a simple quiz on it, their character suffers no ill effects.",
+    "teaser": "Plug this into a computer and witness the magic that is Gustavo for yourself! (Movie coming out in 2093).",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "HOG for President Pin": {
+    "description": "Gives the wearer +1 in all stats and raises health 25% (round down if decimal occurs). Also, this pin pisses off anyone named JOG. Not a power this item has, just an observation and truth.",
+    "teaser": "I don't know why they're running a pig for the highest office in the land. This is the second time now.",
+    "damage": 1,
+    "quality": 5,
+    "uses": -1
+  },
+  "Heaven's Blade": {
     "description": " Has a 50% chance to restore 77 points of health and has a 50% chance to deal exactly 77 points of damage.",
+    "teaser": "If you cut yourself with this, you will officially become the biggest edgelord alive.",
     "damage": 77,
     "quality": 4,
     "uses": -1
   },
-  "**Hug-Cake-Confetti-inator**": {
-    "description": " Fills the landscape with cake that hugs you, then covers it in confetti to prevent you from eating your way out.",
-    "damage": 1,
-    "quality": 0,
-    "uses": -1
-  },
-  "**Huge Bag of Staples**": {
-    "description": " What can one person even do with this many staples???",
-    "damage": 1,
-    "quality": 2,
-    "uses": -1
-  },
-  "**Ice Cream": {
-    "description": "** A fattening, sugary food. May give you a brain freeze!",
-    "damage": 1,
-    "quality": 1,
-    "uses": -1
-  },
-  "**Imagination Potion**": {
-    "description": " Bring your imagination to life. Drains 1 Imagination point on each use.",
-    "damage": 1,
-    "quality": 5,
-    "uses": 0
-  },
-  "**Industrial Drilling Equipment": {
-    "description": "** Let's go as far down as possible, and then go down some more. Allows access to the Underworld.",
-    "damage": 1,
-    "quality": 0,
-    "uses": 1
-  },
-  "**Item Spawner**": {
-    "description": " Spawns two random items once per world.",
+  "Highly Flammable Barrel of Gasoline": {
+    "description": "I don't know what you're planning to do with this, but it's probably a bad idea. 90 base damage when made to explode.",
+    "teaser": "Spike your wife's drink with this!",
     "damage": 1,
     "quality": 4,
     "uses": 1
   },
-  "**JOG for President pin": {
-    "description": "** This is the ugliest pin I have ever seen. Does not grant any stat boosts.",
+  "Holy Hellfire": {
+    "description": "Provides infinite ammo for all of the party's weapons. Can only be used by a character with a Level III blessing.",
+    "teaser": "May Allah's wrath rain down upon your enemies.",
+    "damage": 1,
+    "quality": 5,
+    "uses": 1
+  },
+  "Hug-Cake-Confetti-inator": {
+    "description": " Fills the landscape with cake that hugs you, then covers it in confetti to prevent you from eating your way out.",
+    "teaser": "Doofenschmirtz was definitely tripping the day he created this thing.",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "Huge Bag of Staples": {
+    "description": "Provides 10000 staples for use with items that use staples as ammo.",
+    "teaser": "What can one person even do with this many staples???",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Ice Cream": {
+    "description": "Reduces health by 1 when eaten. Has a larger than normal effect on blood sugar.",
+    "teaser": "A fattening, sugary food. May give you a brain freeze!",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Jar of Bees": {
-    "description": "** A weapon that can be thrown for 2 base damage. If it lands, a bee swarm will deal 20 hits to a random character in the area, each with 1 base damage.",
+  "Imagination Potion": {
+    "description": "Brings your imagination to life. Drains 1 Imagination point on each use.",
+    "teaser": "It looks like apple juice.",
+    "damage": 1,
+    "quality": 5,
+    "uses": 0
+  },
+  "Industrial Drilling Equipment": {
+    "description": "Allows access to the Underworld.",
+    "teaser": "Let's go as far down as possible, and then go down some more.",
+    "damage": 1,
+    "quality": 0,
+    "uses": 1
+  },
+  "Insult Machine": {
+    "description": "Insults all NPCs in the room, dealing a 7 base damage attack against their Smartness with 10 base Smartness. After using this item, they will all attack you. ",
+    "teaser": "Yo momma so dumb she sits on the TV, and watches the couch!",
+    "damage": 7,
+    "quality": 1,
+    "uses": -1
+  },
+  "Inventory Mutator": {
+    "description": "Injecting yourself with this chemical has a 75% chance to give you an extra inventory slot and a 25% chance to remove an inventory slot.",
+    "teaser": "I'm going to inject my inventory with radioactive material for no reason.",
+    "damage": 1,
+    "quality": 3,
+    "uses": 1
+  },
+  "Iron Fist of the Golden Ruler": {
+    "description": "It's really heavy and can't be used as a weapon unless you have 11+ strongness. Provides 5 base damage if you do, however.",
+    "teaser": "A literal cast iron fist. It has a little bit of blood on it...",
+    "damage": 5,
+    "quality": 3,
+    "uses": -1
+  },
+  "Item Spawner": {
+    "description": "Spawns two random items once per world.",
+    "teaser": "Look I think the name is pretty straightforward here.",
+    "damage": 1,
+    "quality": 4,
+    "uses": 1
+  },
+  "JOG for President pin": {
+    "description": "Has no effect when worn. I think you got ripped off, buddy.",
+    "teaser": "This is the ugliest pin I have ever seen.",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Jar of Bees": {
+    "description": "A weapon that can be thrown for 2 base damage. If it lands, a bee swarm will deal 20 hits to a random character in the area, each with 1 base damage.",
+    "teaser": "BARRY: Do you know you're in a fake hive with fake walls?\n DEPRESSED BEE: Our queen was moved here.\nWe had no choice.\n BARRY: This is your queen?\nThat's a man in women's clothes!\nThat's a drag queen!",
     "damage": 2,
     "quality": 2,
     "uses": -1
   },
-  "**Jeffrey Simon Official Pudding": {
-    "description": "** Big Java couldn't resist merchandising all his dead friends.",
+  "Jar of Spiders": {
+    "description": "Eating the spiders in this jar boosts your next Strongness roll by 3 (think of the pure intimidation factor!) but permanently lowers your Coolness by 1.",
+    "teaser": "Mmm, spiders!",
+    "damage": 1,
+    "quality": 1,
+    "uses": 1
+  },
+  "Jeffrey Simon Official Pudding": {
+    "description": "Heals 5 health when eaten, but only if you have Blessing of Graphing or Loves Math.",
+    "teaser": "Big Java couldn't resist merchandising all his dead friends.",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Kidz Bop Radio Speaker 5000": {
-    "description": "** This is a weapon with 5 base damage, surprisingly! The con of this item is the terrible music you are subjecting your enemies to. Comes with earplugs to protect the party.",
+  "Kidz Bop Radio Speaker 5000": {
+    "description": "This is a weapon with 5 base damage, surprisingly! The con of this item is the terrible music you are subjecting your enemies to. Comes with earplugs to protect the party.",
+    "teaser": "Now releasing this August: Kidz Bop 4899589!",
     "damage": 5,
     "quality": 4,
     "uses": -1
   },
-  "**Lecture Notes**": {
+  "Koran": {
+    "description": "Raises Strongness by 3 if you have Terrorist; otherwise, raises Smartness by 1 for the next action one time.",
+    "teaser": "The Islamic sacred book, believed to be the word of God as dictated to Muhammad by the archangel Gabriel and written down in Arabic.",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Lecture Notes": {
     "description": " Lecture notes from a college class. They are ancient and falling apart, so they are one-use. (Reading these increases Smartness by 1.)",
+    "teaser": "This guy's handwriting makes Einstein's hair look organized...",
     "damage": 1,
     "quality": 3,
     "uses": 1
   },
-  "**Lifestealer**": {
+  "Lifestealer": {
     "description": " For one turn, allows the entire party's stats to be redistributed at will. After this turn, party members who had their stats increased will see them return to normal, while party members who had their stats decreased will not.",
+    "teaser": "This thing has a pretty edgy name. I'd use it.",
     "damage": 1,
     "quality": 3,
     "uses": -1
   },
-  "**Lifetime Supply of Grandma's Kidney Stew**": {
-    "description": " Grandma always hated your side of the family...Even after death, she's never given up trying to destroy you...",
+  "Lifetime Subscription to Oprah Magazine": {
+    "description": "Acquiring this item will grant or upgrade Blessing of Gifts. It cannot be removed through normal means.",
+    "teaser": "Oh boy, I can't wait to look through Oprah's magazine and blow $750 on random advertised garbage!",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "Lifetime Supply of Grandma's Kidney Stew": {
+    "description": "Instantly consumed when picked up. Fills your inventory with Grandma's Kidney Stew for the rest of your life. Grandma's Kidney Stew is an explosive.",
+    "teaser": "Grandma always hated your side of the family...Even after death, she's never given up trying to destroy you...",
     "damage": 1,
     "quality": 0,
     "uses": 1
   },
-  "**Lightning Rod**": {
-    "description": " Allows Lightning to be cast from any distance, dealing a 150 base damage ranged attack. Requires Electromancer to use and does not work on others with the trait. Has a 1 in 20 chance to give anyone struck with it Electromancer.",
+  "Lightning Rod": {
+    "description": "Allows Lightning to be cast from any distance, dealing a 150 base damage ranged attack. Requires Electromancer to use and does not work on others with the trait. Has a 1 in 20 chance to give anyone struck with it Electromancer.",
+    "teaser": "I'm gonna stick it in my pants, what's the worst thing that could happen?",
     "damage": 150,
     "quality": 5,
     "uses": -1
   },
-  "**Lightsaber minus Batteries**": {
+  "Lightsaber minus Batteries": {
     "description": " A base 1 damage weapon. Electrical power will power it up to base 12.",
+    "teaser": "I didn't know lightsabers required batteries.",
     "damage": 1,
     "quality": 4,
     "uses": -1
   },
-  "**Lightsaber**": {
+  "Lightsaber": {
     "description": " A base 12 damage weapon. Overuse will wear out its batteries.",
+    "teaser": "Excels at chopping off hands.",
     "damage": 12,
     "quality": 5,
     "uses": -1
   },
-  "**Mace and Chain": {
-    "description": "** Requires 9 Strongness to hold. 10 base damage melee weapon.",
+  "Mace and Chain": {
+    "description": "Requires 9 Strongness to hold. 10 base damage melee weapon.",
+    "teaser": "Ouch. ",
     "damage": 10,
     "quality": 4,
     "uses": -1
   },
-  "**Magic Lottery Ticket": {
-    "description": "** This lottery ticket contains 9 boxes which can be scratched off to obtain X amount of gold. Eight of the boxes are helpful and will give you between 50 and 5000 gold. One box, however, will curse the player that uses this item! The cursed player's stats all instantly reduced to 2/2/2 (the person who made this lottery ticket is sadistic, but not 100% cruel). After a player is cursed, the item becomes useless. If the cursed box is somehow the final box remaining and the player is stupid enough to attempt to use it, a roll is made to determine its effect. If a 10 or lower is rolled, the players stats are reduced to 0/0/0 AND the entire party, not just the cursed player, lose all gold they have on hand. If an 11 or higher is rolled, the cursed player is in the 1%! Gold the player currently has is doubled AND stats are increased by +7/+7/+7.",
+  "Magic Lottery Ticket": {
+    "description": "This lottery ticket contains 9 boxes which can be scratched off to obtain X amount of gold. Eight of the boxes are helpful and will give you between 50 and 5000 gold. One box, however, will curse the player that uses this item! The cursed player's stats all instantly reduced to 2/2/2 (the person who made this lottery ticket is sadistic, but not 100% cruel). After a player is cursed, the item becomes useless. If the cursed box is somehow the final box remaining and the player is stupid enough to attempt to use it, a roll is made to determine its effect. If a 10 or lower is rolled, the players stats are reduced to 0/0/0 AND the entire party, not just the cursed player, lose all gold they have on hand. If an 11 or higher is rolled, the cursed player is in the 1%! Gold the player currently has is doubled AND stats are increased by +7/+7/+7.",
+    "teaser": "'The lottery is a tax on people who are bad at math.' -- Albert Einstein",
     "damage": 1,
     "quality": 4,
     "uses": 9
   },
-  "**Mind Reader**": {
+  "Microwave": {
+    "description": " Can be used to microwave any food item, transforming it into a 'Microwaved' version of itself with a doubled effect. Batteries not included...",
+    "teaser": "This is the perfect cage for a pet rat. It even has a built in heating function!",
+    "damage": 1,
+    "quality": 3,
+    "uses": 0
+  },
+  "Midterm Exam": {
+    "description": " Showing this to anyone with 0 or less Smartness insta-kills them. ",
+    "teaser": "No!!!!!!!!!!!!!!!!!!!!",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Mind Reader": {
     "description": " Reads the minds of anyone within five feet. Requires batteries.",
+    "teaser": "My head hurts...",
     "damage": 1,
     "quality": 4,
     "uses": 0
   },
-  "**Model Volcano": {
-    "description": "** Someone's science project.",
+  "Model Volcano": {
+    "description": "Placing an explosive inside this volcano and then leaving it somewhere may allow you to kill idiots.",
+    "teaser": "Someone's science project.",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Mouth Stealer**": {
-    "description": " Ranged weapon that can be used once on every person. 9 base damage. When used,the person's mouth is removed and they can no longer speak.",
+  "Mouth Stealer": {
+    "description": "Ranged weapon that can be used once on every person. 9 base damage. When used,the person's mouth is removed and they can no longer speak.",
+    "teaser": "...",
     "damage": 9,
     "quality": 4,
     "uses": -1
   },
-  "**Needle of Loyalty**": {
-    "description": " One use. Stabbing any NPC with this needle causes them to get mind controlled and join the party. Lasts for two worlds; the NPC will not be happy when the effect wears off.",
-    "damage": 1,
-    "quality": 5,
-    "uses": 1
-  },
-  "**Nuclear Bomb": {
-    "description": "** For christ's sake, be careful with this thing. You could destroy an entire world with this. WHY IS IT HERE.",
-    "damage": 1,
-    "quality": 0,
-    "uses": 1
-  },
-  "**Old Engine**": {
-    "description": " Attach this engine to any vehicle, and watch it go!",
-    "damage": 1,
-    "quality": 0,
-    "uses": -1
-  },
-  "**Overclocker": {
-    "description": "** One-use. Can be applied to any consumable item; when used, that item's max uses increases by 1.",
-    "damage": 1,
-    "quality": 5,
-    "uses": 1
-  },
-  "**Pendant of DC": {
-    "description": "** When equipped, stats increase or decrease accordingly (+4/-2/-2). If it collides with the Pendant of Marvel, the universe implodes.",
-    "damage": 1,
-    "quality": 3,
-    "uses": -1
-  },
-  "**Pendant of Marvel": {
-    "description": "** When equipped, stats increase or decrease accordingly (-4/+2/+2). If it collides with the Pendant of DC, the universe implodes.",
-    "damage": 1,
-    "quality": 3,
-    "uses": -1
-  },
-  "**Pendant of Willpower**": {
-    "description": " Allows one reroll per world while equipped. Only one pendant can be worn at once.",
-    "damage": 1,
-    "quality": 4,
-    "uses": 1
-  },
-  "**Pickpocket Machine**": {
-    "description": " One-use. Allows you to steal one item from someone else's inventory. Does not work on bosses.",
-    "damage": 1,
-    "quality": 4,
-    "uses": 1
-  },
-  "**Potato**": {
-    "description": " When eaten, restores 1 health.",
+  "Nacho Cheese Dorito": {
+    "description": "A single Nacho Cheese Dorito. Restores 1 health if eaten by someone with Blessing of Nacho Cheese. Does 1000 damage if eaten by someone with Blessing of Cool Ranch. ",
+    "teaser": "Only disgusting freaks like Cool Ranch. This is the OG Dorito and as far as I am concerned the only one.",
     "damage": 1,
     "quality": 2,
+    "uses": -1
+  },
+  "Napoleonic Code": {
+    "description": "Reading this item grants or upgrades Blessing of Domination. ",
+    "teaser": "The Napoleonic code gave post-revolutionary France its first coherent set of laws concerning property, colonial affairs, the family and individual rights.",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "Needle of Loyalty": {
+    "description": " One use. Stabbing any NPC with this needle causes them to get mind controlled and join the party. Lasts for two worlds; the NPC will not be happy when the effect wears off.",
+    "teaser": "How can a needle be loyal? It just doesn't make any sense.",
+    "damage": 1,
+    "quality": 5,
     "uses": 1
   },
-  "**Rare Flashlight**": {
-    "description": " A collectible item for morons. It doesn't even work!",
+  "Nuclear Bomb": {
+    "description": "A very powerful explosive that affects everyone in the current world. Has a 95% chance to deal 9000 damage. Has a 5% chance to mutate into a horrifying abomination.",
+    "teaser": "For christ's sake, be careful with this thing. You could destroy an entire world with this.",
+    "damage": 1,
+    "quality": 0,
+    "uses": 1
+  },
+  "Obsidian Eye": {
+    "description": "When in your inventory, you sprout a third eye on your forehead, and your Smartness can now be used as Mana. When used in this way, the damage done by an attack is multiplied by your Smartness, and your Smartness then decreases by 1.",
+    "teaser": "I can see everything...",
+    "damage": 1,
+    "quality": 5,
+    "uses": -1
+  },
+  "Ogre Curse Spell": {
+    "description": "A book containing a spell that will give its target Blessing of Ugliness or upgrade its target's existing Blessing of Ugliness.",
+    "teaser": "From this day forward, you will forever be green, ugly, and in need of deodorant!",
+    "damage": 1,
+    "quality": 0,
+    "uses": 1
+  },
+  "Old Engine": {
+    "description": "Fill it with gasoline and attach it to a vehicle, and you will not need to refuel that vehicle for the rest of its existence.",
+    "teaser": "Attach this engine to any vehicle, and watch it go!",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "Overclocker": {
+    "description": "One-use. Can be applied to any consumable item; when used, that item's max uses increases by 1.",
+    "teaser": "What do you mean this magic spell can only be used once? Screw that!",
+    "damage": 1,
+    "quality": 5,
+    "uses": 1
+  },
+  "Patent #63440": {
+    "description": "Allows you to sue people for eating cheeseburgers. When combined with a lawyer, you can steal all of the gold from anyone who eats a cheeseburger.",
+    "teaser": "I didn't know cheeseburgers were copyrighted...",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Refrigerator from Indiana Jones**": {
-    "description": " If item is equipped, the player hides inside the refrigerator and becomes invincible to all attacks, but the player also is unable to perform any other actions while hiding in the refrigerator. Additionally, every time the player uses this item, movie fanatics become enraged of the lack of logic of this item and shame you, resulting in an initial -1 coolness (every use of this item doubles the loss of coolness, so the first use equals -1 coolness, the second use equals -2 coolness, the third use equals -4 coolness, etc.). This item can cause coolness to fall into the negatives, and if this were to occur, movie fanatics will become fed up and follow you everywhere you go. If they catch you, they will beat you to death, and since they do not believe in the refrigerator's magic properties, this item would become useless in combat with the angry mob of these movie fanatics.",
-    "damage": 1,
-    "quality": 2,
-    "uses": -1
-  },
-  "**Revival Ashes**": {
-    "description": " Brings a dead person back to life. They may not come back the same...",
+  "Paul Blart Mall Cop 3 Blu-Ray Disk": {
+    "description": "Watching this movie grants or upgrades Blessing of Bloat.",
+    "teaser": "In this movie, Paul Blart becomes increasingly fatter and fatter until he eventually ascends to godhood.",
     "damage": 1,
     "quality": 0,
     "uses": 1
   },
-  "**Right Hand of Big Java**": {
+  "Pendant of DC": {
+    "description": "When equipped, stats increase or decrease accordingly (+4/-2/-2). If it collides with the Pendant of Marvel, the universe implodes.",
+    "teaser": "DANANANANANANA BATMAN!",
+    "damage": 1,
+    "quality": 3,
+    "uses": -1
+  },
+  "Pendant of Marvel": {
+    "description": "When equipped, stats increase or decrease accordingly (-4/+2/+2). If it collides with the Pendant of DC, the universe implodes.",
+    "teaser": "Spiderman, Spiderman, does whatever a spider can",
+    "damage": 1,
+    "quality": 3,
+    "uses": -1
+  },
+  "Pendant of Willpower": {
+    "description": " Allows one reroll per world while equipped. Only one pendant can be worn at once.",
+    "teaser": "If you try the same thing enough times, you have to eventually succeed, right?",
+    "damage": 1,
+    "quality": 4,
+    "uses": 1
+  },
+  "Pentagram": {
+    "description": " Make sacrifices inside this pentagram and be rewarded according to the value of your sacrifice. ",
+    "teaser": "Finally, somewhere to sacrifice stuff. I've been looking for this everywhere.",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "Pickpocket Machine": {
+    "description": " One-use. Allows you to steal one item from someone else's inventory. Does not work on bosses.",
+    "teaser": "For those with fat fingers.",
+    "damage": 1,
+    "quality": 4,
+    "uses": 1
+  },
+  "Police Badge": {
+    "description": "Showing this badge will double the user's Smartness and Coolness for checks against law enforcement officers. It also allows the use of the Cop's Gun and Tear Gas Bomb items.",
+    "teaser": "Oh no! It's the cops!",
+    "damage": 1,
+    "quality": 3,
+    "uses": -1
+  },
+  "Potato": {
+    "description": " When eaten, restores 1 health.",
+    "teaser": "Oh, hi. How are you holding up? BECAUSE I'M A POTATO.",
+    "damage": 1,
+    "quality": 2,
+    "uses": 1
+  },
+  "Power Cord": {
+    "description": " If you are in a location with a power outlet, you can plug in and use any item requiring batteries. ",
+    "teaser": "Is this a giant gummy worm?",
+    "damage": 1,
+    "quality": 4,
+    "uses": -1
+  },
+  "Prayer Book": {
+    "description": " When used, you can ask a God for an item of your choice. You have a 1 in 3 chance of getting what you ask for, a 1 in 3 chance of getting that god's blessing, and a 1 in 3 chance of taking 10 damage.",
+    "teaser": "This would make good fuel for a fire.",
+    "damage": 1,
+    "quality": 3,
+    "uses": -1
+  },
+  "Rare Flashlight": {
+    "description": "A collectible item for morons. It doesn't even work!",
+    "teaser": "This flashlight will illuminate the path in front of you.",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Recording of Mother in Law": {
+    "description": " Allows you to deal damage with Smartness instead of Strength. If your attack misses, you gain Blessing of Argument and this item is consumed.",
+    "teaser": "Hearing her voice is literally physically painful. ",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Refrigerator from Indiana Jones": {
+    "description": " If item is equipped, the player hides inside the refrigerator and becomes invincible to all attacks, but the player also is unable to perform any other actions while hiding in the refrigerator. Additionally, every time the player uses this item, movie fanatics become enraged of the lack of logic of this item and shame you, resulting in an initial -1 coolness (every use of this item doubles the loss of coolness, so the first use equals -1 coolness, the second use equals -2 coolness, the third use equals -4 coolness, etc.). This item can cause coolness to fall into the negatives, and if this were to occur, movie fanatics will become fed up and follow you everywhere you go. If they catch you, they will beat you to death, and since they do not believe in the refrigerator's magic properties, this item would become useless in combat with the angry mob of these movie fanatics.",
+    "teaser": "I hope Indiana Jones had some cheese in here because boy am I hungry.",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Revival Ashes": {
+    "description": " Brings a dead person back to life. They may not come back the same...",
+    "teaser": "Brings a dead person back to life!",
+    "damage": 1,
+    "quality": 0,
+    "uses": 1
+  },
+  "Rigged Dice": {
+    "description": "Allows you to force people into giving you money with a Smartness or Coolness check (50 gold per use). Each time, has a 10% chance to make the NPC realize you're cheating and attack you.",
+    "teaser": "Wow, I've never seen someone roll eight Yahtzees in a row before.",
+    "damage": 1,
+    "quality": 3,
+    "uses": -1
+  },
+  "Right Hand of Big Java": {
     "description": " It's a really big hand, covered in taco spices. 2 base damage when used as a weapon.",
+    "teaser": "I'm really disturbed by how many body parts are just floating around in the item pool.",
     "damage": 2,
     "quality": 3,
     "uses": -1
   },
-  "**Rights to Friends**": {
+  "Rights to Friends": {
     "description": " This item has a one time use where you can exchange the item to get rid of any NPC instantly without conflict. This does not include boss fights.",
+    "teaser": "Hi, I'm Chandler.",
     "damage": 1,
     "quality": 4,
     "uses": 1
   },
-  "**Rotten Meat": {
-    "description": "** You can eat it if you want, but it might make you sick...",
+  "Rotten Meat": {
+    "description": " You can eat it if you want, but it might make you sick...",
+    "teaser": "What do you mean it's rotten, it looks perfectly healthy to me.",
     "damage": 1,
     "quality": 1,
     "uses": 1
   },
-  "**Rusty Katana**": {
+  "Russian Roulette Gun": {
+    "description": "If the party plays Russian Roulette with this gun, it will become a normal gun with 15 base damage (but no ammo). The gun will deal 25 damage to a random party member.",
+    "teaser": "Either I seem cool to all my friends or I die right here right now. Win/win if you ask me.",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "Rusty Katana": {
     "description": " Not as sharp as it used to be. 3 base damage weapon.",
+    "teaser": "Tetanus in blade form.",
     "damage": 3,
     "quality": 3,
     "uses": -1
   },
-  "**Sack of Balls": {
-    "description": "** A large bag containing balls of all shapes and sizes.",
+  "Sack of Balls": {
+    "description": "Provides 400 balls to any item that uses balls as ammo.",
+    "teaser": "A large bag containing balls of all shapes and sizes.",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Set of Explosive Nesting Dolls**": {
-    "description": " Although this weapon appears to just be a regular set of Nesting Dolls, each doll that is a part of this set can act as a powerful grenade. The set comes with 5 dolls which must be used in order; they have 32 base damage, 16 base damage, 8 base damage, 4 base damage, and 2 base damage respectively.",
+  "Sadism Pendant": {
+    "description": " While worn, heals this character by 1 health per damage taken by other party members.",
+    "teaser": "Signals to everyone around you that you are a terrible person.",
+    "damage": 1,
+    "quality": 4,
+    "uses": -1
+  },
+  "Science Stick": {
+    "description": "A weapon that transforms any character into a boss. If used on a party member, the party member will leave the party and promptly attack them. ",
+    "teaser": "Let's do some science.",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "Set of Explosive Nesting Dolls": {
+    "description": "Each doll that is a part of this set can act as a powerful grenade. The set comes with 5 dolls which must be used in order; they have 32 base damage, 16 base damage, 8 base damage, 4 base damage, and 2 base damage respectively.",
+    "teaser": "This just looks like a regular set of Nesting Dolls.",
     "damage": 32,
     "quality": 4,
     "uses": 5
   },
-  "**SexyHikers.com Free Trial": {
-    "description": "** Allows you to meet and date up to 3 sexy hikers before you must pay to continue your subscription.",
+  "SexyHikers.com Free Trial": {
+    "description": " Allows you to meet and date up to 3 sexy hikers before you must pay to continue your subscription.",
+    "teaser": "This is even better than Christian Mingle!",
     "damage": 1,
     "quality": 3,
     "uses": 3
   },
-  "**Shield**": {
+  "Shield": {
     "description": " When in your inventory, reduces all damage taken by 2.",
+    "teaser": "THIS IS SPARTA!!!!!!!!!!!!11111",
     "damage": 1,
     "quality": 4,
     "uses": -1
   },
-  "**Ship of the Line**": {
+  "Ship of the Line": {
     "description": " When a player boards the ship of the line, everyone gets transported to the late 18th and 19th century during the French Revolutionary Wars and the Napoleonic Wars. To return back to the normal time, you must help the British sailors and British soldiers defeat Napoleon. If Napoleon is defeated, you will get unimaginable rewards.",
+    "teaser": "It's a big ass boat!",
     "damage": 1,
     "quality": 0,
     "uses": 1
   },
-  "**Shrek 5 Blu-Ray": {
-    "description": "** Watching this movie will give everyone Blessing of Ogre or upgrade their existing Blessing of Ogre. Shrek will also...visit them...while they sleep the following night.",
+  "Shrek 5 Blu-Ray": {
+    "description": " Watching this movie will give everyone Blessing of Ogre or upgrade their existing Blessing of Ogre. Shrek will also...visit them...while they sleep the following night.",
+    "teaser": "This movie was all right until they spent 30 minutes on the scene where Shrek gets probed by space aliens.",
     "damage": 1,
     "quality": 0,
     "uses": -1
   },
-  "**Silencer**": {
+  "Silencer": {
     "description": " While this item is in your inventory, you are unable to communicate with others in any way, shape, or form.",
+    "teaser": "...",
     "damage": 1,
     "quality": 0,
     "uses": -1
   },
-  "**Smurfinator**": {
-    "description": " This looks fun!",
+  "Skin Eating Bacterium": {
+    "description": "When this item is spawned, it infects a random party member or NPC, dealing 1 damage per action they take. Does not affect anyone with the Steel Skin trait.",
+    "teaser": "If you're reading this, it's already infected someone nearby.",
+    "damage": 1,
+    "quality": 0,
+    "uses": 0
+  },
+  "Smurfinator": {
+    "description": "Transforms everyone within its radius into Smurfs. Their highest stat will become 1 and their other two stats will become 0. Works on bosses, but the party will also be affected...",
+    "teaser": "This looks fun!",
     "damage": 1,
     "quality": 0,
     "uses": -1
   },
-  "**Smutty Fanfiction**": {
-    "description": " Read at your own risk...",
+  "Smutty Fanfiction": {
+    "description": "Reading this item deals 3 points of damage.",
+    "teaser": "Read at your own risk...",
     "damage": 1,
     "quality": 0,
     "uses": -1
   },
-  "**Soul Sucking Vacuum Cleaner**": {
-    "description": " WARNING: SOUL VACUUM CLEANER INC IS NOT LIABLE OR RESPONSIBLE IN ANY WAY FOR ANY LOSS OF SOULS THAT MAY COME AS A RESULT OF USING THIS PRODUCT. USE AT YOUR OWN RISK.",
+  "Sonic the Hedgehog 2 Video Game": {
+    "description": "Once played, changes the Strongness set by your Rage trait from 10 to 11.",
+    "teaser": "A great way to entertain your five year old, but be warned; he might get stuck on the second level forever.",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Soul Sucking Vacuum Cleaner": {
+    "description": "When turned on, sucks souls out of bodies.",
+    "teaser": "WARNING: SOUL VACUUM CLEANER INC IS NOT LIABLE OR RESPONSIBLE IN ANY WAY FOR ANY LOSS OF SOULS THAT MAY COME AS A RESULT OF USING THIS PRODUCT. USE AT YOUR OWN RISK.",
     "damage": 1,
     "quality": 0,
     "uses": -1
   },
-  "**Space Ripper**": {
+  "Space Ripper": {
     "description": " Allows the party to immediately travel to any world on the map. As long as they do not select a repeat world, this can be used to change the El Dorado route significantly. The selected world will still count as the next world.",
+    "teaser": "Let's rip holes in the spacetime continuum! No way that's a bad idea!",
     "damage": 1,
     "quality": 5,
     "uses": 1
   },
-  "**Spicy Taco Surprise**": {
-    "description": " A base 25 damage explosive. You can probably trick dumb people into eating this.",
+  "Spicy Taco Surprise": {
+    "description": "A base 25 damage explosive. You can probably trick dumb people into eating this.",
+    "teaser": "The lunch ladies really cooked up something this time...",
     "damage": 25,
     "quality": 4,
     "uses": -1
   },
-  "**Spiteful Spirit**": {
+  "Spiteful Spirit": {
     "description": " Unleash this spirit upon your enemies! He will apply constant permanent stat debuffs to all who have wronged him. Once activated, he will not go away.",
+    "teaser": "He won't stop ranting and raving about people who wronged him 65 years ago. Give it a break old man.",
     "damage": 1,
     "quality": 0,
     "uses": 1
   },
-  "**Staple Gun of the Moon**": {
-    "description": " A weapon that fires staples as ammo. 1 base damage. Extremely long range.",
+  "Stairway to Heaven": {
+    "description": "Spawns a massive stairway leading up to god knows where. At the top of the stairway is a boss with double the typical difficulty. Defeating this boss is guaranteed to spawn three 20 roll items and one 1 roll item.",
+    "teaser": "Personally, I prefer 'Highway to Hell'.",
+    "damage": 1,
+    "quality": 3,
+    "uses": 1
+  },
+  "Staple Gun of the Moon": {
+    "description": "A weapon that fires staples as ammo. 1 base damage. Extremely long range.",
+    "teaser": "The ultimate office weapon.",
     "damage": 1,
     "quality": 4,
     "uses": -1
   },
-  "**Steroids**": {
+  "Steroids": {
     "description": " Increases Strongness by 5. It is illegal to use these and then participate in an athletic competition.",
+    "teaser": "I can't wait to have increased appetite, weight gain, and changes in mood!",
     "damage": 1,
     "quality": 5,
     "uses": 1
   },
-  "**Stormtrooper's Blaster**": {
-    "description": " 8 base damage, but requires a nat 20 (critical hit) not to miss...",
+  "Stormtrooper's Blaster": {
+    "description": "8 base damage, but requires a nat 20 (critical hit) not to miss...",
+    "teaser": "Pew! Pew!",
     "damage": 8,
     "quality": 1,
     "uses": -1
   },
-  "**Strange Dollhouse": {
-    "description": "** All of the dolls inside are goth. This item seems intended for edgy 10 year old girls.",
+  "Strange Dollhouse": {
+    "description": "Giving this item to a character with the Edgy trait allows them to grow out of it 3 worlds from now as long as they keep this item.",
+    "teaser": "All of the dolls inside are goth. This item seems intended for edgy 10 year old girls.",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Swap Your Wife With Someone Else Potion": {
-    "description": "** Just slip this in your wife's drink, and you'll have a new wife, as if you married them instead!",
+  "Summon Tornado": {
+    "description": "Destroys the surrounding area, dealing 1000 damage to everyone in the vicinity (identically to an explosive). Does not activate when flying out of your inventory.",
+    "teaser": "You spin me right round, baby, right round...",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "Swap Your Wife With Someone Else Potion": {
+    "description": "Just slip this in your wife's drink, and you'll have a new wife, as if you married them instead!",
+    "teaser": "An infamous item responsible for the whole blob situation...",
     "damage": 1,
     "quality": 3,
     "uses": 1
   },
-  "**Tax Immunity Certificate**": {
+  "THE QUAVERING, PROTUBERANT, AMORPHOUS CREAM...": {
+    "description": "Applying this cream grants or upgrades Blessing of Chaos.",
+    "teaser": "I think the name says it all.",
+    "damage": 1,
+    "quality": 0,
+    "uses": 1
+  },
+  "Tank Ammo": {
+    "description": "An explosive that can only be used with a tank. Provides one shot.",
+    "teaser": "Tank you very much :)",
+    "damage": 1,
+    "quality": 2,
+    "uses": 1
+  },
+  "Tank": {
+    "description": "A vehicle with 560 health and a 35 base damage attack. Riding inside of this vehicle causes it to take damage instead of you. Requires gasoline as fuel, consuming one barrel per area it travels. Requires explosives as ammunition. Neither of these items are included.",
+    "teaser": "For when you need to ride over protesters and don't want to get blood on your motorcycle.",
+    "damage": 1,
+    "quality": 4,
+    "uses": -1
+  },
+  "Tax Immunity Certificate": {
     "description": " As long as this is in your inventory, you will never pay taxes again!",
+    "teaser": "Is this legal in a court of law?",
     "damage": 1,
     "quality": 2,
     "uses": -1
   },
-  "**Teenager's Elbow**": {
-    "description": " Who did this come from??? And why???",
+  "Tear Gas Bomb": {
+    "description": " When thrown, makes everyone in the room cry. This reduces their coolness to 0 temporarily, since everybody knows cool kids don't cry. This weapon is essential to making cops able to enforce the law even in the face of peer pressure from the extremely cool. The bomb is specifically programmed not to go off unless the user has a police badge. ",
+    "teaser": "Begone, protesters!",
+    "damage": 0,
+    "quality": 3,
+    "uses": 1
+  },
+  "Teenager's Elbow": {
+    "description": "I'm not really sure why you thought this would be useful. It's not.",
+    "teaser": "Who did this come from??? And why???",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Teleporter**": {
+  "Teleporter": {
     "description": " Randomly teleports you somewhere in this world. Requires batteries.",
+    "teaser": "Deconstructs you atom by atom and rebuilds you somewhere else. The question is: is it still you?",
     "damage": 1,
     "quality": 2,
     "uses": 0
   },
-  "**Thanksgiving Feast**": {
+  "Thanksgiving Feast": {
     "description": " One-use. Fully heals the entire party.",
+    "teaser": "Many Native Americans do not celebrate the arrival of the Pilgrims and other European settlers. To them, Thanksgiving Day is a reminder of the genocide of millions of their people, the theft of their lands, and the relentless assault on their cultures.",
     "damage": 1,
     "quality": 5,
     "uses": 1
   },
-  "**The Freemason Ring": {
-    "description": "** When a player puts on the ring, they become a Freemason and have access to all of the Freemasons\u2019 secrets which are either really beneficial or completely useless depending on the roll. Wearing this item removes Blessing of Order.",
+  "The Freemason Ring": {
+    "description": "When a player puts on the ring, they become a Freemason and have access to all of the Freemasons\u2019 secrets which are either really beneficial or completely useless depending on the roll. Wearing this item removes Blessing of Order.",
+    "teaser": "Mason is in prison for no reason! Wear this ring to show your support!",
     "damage": 1,
     "quality": 3,
     "uses": -1
   },
-  "**The Magic Flute**": {
-    "description": " A ranged weapon with base 95 damage. When played, the magic flute will vaporize any being it does enough damage to kill. Cannot be used by any character without the Musician trait.",
+  "The Magic Flute": {
+    "description": "A ranged weapon with base 95 damage. When played, the magic flute will vaporize any being it does enough damage to kill. Cannot be used by any character without the Musician trait.",
+    "teaser": "It's like Squidward's clarinet, but even more painful to listen to.",
     "damage": 95,
     "quality": 5,
     "uses": 0
   },
-  "**The Useless Droid That Yells Profanity (U.D.T.Y.P.)**": {
+  "The Useless Droid That Yells Profanity (U.D.T.Y.P.)": {
     "description": " The name says it all. This little robot companion has no use whatsoever except to follow you and scream profanity at every opportunity it gets. When this item is acquired, there is a 60% greater chance of initiating combat with all NPCs the carrier encounters, but the carrier also gets +3 coolness in stats. If for any reason this item is destroyed, lost, or abandoned, you are no longer cool and your coolness instantly drops to 0.",
+    "teaser": "FRICK YOU!",
     "damage": 1,
     "quality": 1,
     "uses": -1
   },
-  "**Time Machine**": {
+  "Thigh Workout Ghost": {
+    "description": "Increases Strongness by 1 and changes one of your traits to Thicc. ",
+    "teaser": "One! Two! Three! If you get to 750, I'll stop haunting you",
+    "damage": 1,
+    "quality": 2,
+    "uses": 1
+  },
+  "Time Machine": {
     "description": " Changes one of your traits to Time Traveler on use. Requires batteries. DO NOT USE THIS ITEM IF YOU DON'T KNOW WHAT YOU'RE DOING.",
+    "teaser": "Oh boy, this adventure is about to go off the deep end...",
     "damage": 1,
     "quality": 0,
     "uses": 0
   },
-  "**Timey-Wimey Stick**": {
+  "Timey-Wimey Stick": {
     "description": " Forcibly time travels anyone who is hit with it to a random point in the future. Has a 50% chance to break on each use.",
+    "teaser": "I got hit with this stick and now my parents are dead and all my friends are 40 years older than me :(",
     "damage": 1,
     "quality": 4,
     "uses": -1
   },
-  "**Trading Machine**": {
+  "Trading Machine": {
     "description": " Allows you to exchange any inventory item for the inventory item of an NPC. Requires batteries.",
+    "teaser": "This is just the pickpocket machine but it makes you waste a perfectly good item.",
     "damage": 1,
     "quality": 4,
     "uses": -1
   },
-  "**Tub of Popcorn**": {
-    "description": " Perfect for enjoying a movie with your fatass friends.",
-    "damage": 1,
-    "quality": 2,
-    "uses": -1
-  },
-  "**Used Matches**": {
-    "description": " These matches no longer work. Why wouldn't someone just throw them out?",
-    "damage": 1,
-    "quality": 1,
-    "uses": -1
-  },
-  "**Voodoo Dice**": {
-    "description": " Whenever the player uses this item, any bad roll can be given to another player for their next turn, and this player can reroll. If the dice are ever destroyed, stolen, or lost, the player who was using this item has all stats drop to 0 and health reduced to 1. When this occurs, every other player also recieves stat boosts equal to the stat reduction of their companion distributed over the entire party. To summarize, if a player acquires this item, get ready to have the party turn against one another.",
-    "damage": 1,
-    "quality": 5,
-    "uses": -1
-  },
-  "**Wearable Guillotine**": {
-    "description": " The latest fashion accessory that's taking the world by storm! (does not actually work.)",
-    "damage": 1,
-    "quality": 1,
-    "uses": -1
-  },
-  "**White Flag**": {
-    "description": " Some say that waving this flag around can bring peace. Others say it is just a useless piece of garbage trash for idiots.",
-    "damage": 1,
-    "quality": 2,
-    "uses": -1
-  },
-  "**Wiper Blade**": {
-    "description": " A melee weapon with 3 base damage. Has a 50% chance to break on each strike.",
-    "damage": 3,
-    "quality": 2,
-    "uses": -1
-  },
-  "**Wooden Stake**": {
-    "description": " 1 base damage against normal enemies. 100 base damage against enemies with the Vampire trait.",
-    "damage": 1,
-    "quality": 4,
-    "uses": -1
-  },
-  "**World's Biggest Doughnut**": {
-    "description": " Eat this doughnut and become fat.",
+  "Trait Mangler": {
+    "description": " A ranged weapon that randomly changes traits when fired. Can only be used on each person twice.",
+    "teaser": "shoot everyone with this immediately",
     "damage": 1,
     "quality": 0,
     "uses": -1
   },
-  "**Yoga Mat**": {
-    "description": " Allows you to perform a yoga routine once, increasing your Strongness by 2.",
+  "Tub of Popcorn": {
+    "description": " Perfect for enjoying a movie with your fatass friends.",
+    "teaser": "Did you know it would take 8 hours of walking to burn off the calories contained within this tub?",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Used Matches": {
+    "description": "These matches no longer work. Why wouldn't someone just throw them out?",
+    "teaser": "These look crunchy.",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Voodoo Dice": {
+    "description": " Whenever the player uses this item, any bad roll can be given to another player for their next turn, and this player can reroll. If the dice are ever destroyed, stolen, or lost, the player who was using this item has all stats drop to 0 and health reduced to 1. When this occurs, every other player also recieves stat boosts equal to the stat reduction of their companion distributed over the entire party. To summarize, if a player acquires this item, get ready to have the party turn against one another.",
+    "teaser": "Roll, and the dice will do as you command.",
+    "damage": 1,
+    "quality": 5,
+    "uses": -1
+  },
+  "WEED Dorito": {
+    "description": "A single Dorito, but infused with love (a.k.a. THC). The flavor is not Nacho Cheese or Cool Ranch; it is Weed Flavor. Bestows the Blazed effect when eaten, temporarily increasing Coolness by 3.",
+    "teaser": "The perfect solution to the Cool Ranch vs Nacho Cheese war...",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Wand": {
+    "description": "Deals 7 base damage. Uses Smartness instead of Strongness for weapons checks.",
+    "teaser": "The most basic magical weapon.",
+    "damage": 7,
+    "quality": 5,
+    "uses": -1
+  },
+  "Wearable Guillotine": {
+    "description": "Does not actually work. It is just a cosmetic decoration.",
+    "teaser": " The latest fashion accessory that's taking the world by storm!",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Whiskey": {
+    "description": "Consumable. Applies the Drunk effect.",
+    "teaser": "Drink your problems away!",
+    "damage": 1,
+    "quality": 2,
+    "uses": 3
+  },
+  "White Flag": {
+    "description": "Using this item during a conflict has a 5% chance to immediately end it.",
+    "teaser": " Some say that waving this flag around can bring peace. Others say it is just a useless piece of garbage trash for idiots.",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Wiper Blade": {
+    "description": " A melee weapon with 3 base damage. Has a 50% chance to break on each strike.",
+    "teaser": "Desperate times call for desperate excuses for weapons.",
+    "damage": 3,
+    "quality": 2,
+    "uses": -1
+  },
+  "Wooden Stake": {
+    "description": " 1 base damage against normal enemies. 100 base damage against enemies with the Vampire trait.",
+    "teaser": "The poor tree. Imagine having your body carved up and distributed...",
     "damage": 1,
     "quality": 4,
     "uses": -1
   },
-  "**f(x) = x^3 + -2x^2 + (1/7)x - 3**": {
-    "description": " A basic cubic function.",
+  "World's Biggest Doughnut": {
+    "description": "Gives or upgrades Blessing of Bloat.",
+    "teaser": "Eat this doughnut and become fat.",
+    "damage": 1,
+    "quality": 0,
+    "uses": -1
+  },
+  "Yoga Mat": {
+    "description": "Allows you to perform a yoga routine once, increasing your Strongness by 2.",
+    "teaser": "Yoga time is the only way I can get away from my 6 children and my annoying husband Jerry.",
+    "damage": 1,
+    "quality": 4,
+    "uses": -1
+  },
+  "f(x) = x^3 + -2x^2 + (1/7)x + 0.1": {
+    "description": "Launches the user on a strange trajectory...",
+    "teaser": "A basic cubic function.",
     "damage": 1,
     "quality": 1,
     "uses": -1
+  },
+  "Arnold": {
+    "description": "A useless pet with 3 health that complains every so often, wasting his owner's action.",
+    "teaser": "Please take him, we don't want him anymore.",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Arrow": {
+    "description": " Provides one shot with a bow.",
+    "teaser": "I was once an adventurer like you...",
+    "damage": 1,
+    "quality": 3,
+    "uses": 1
+  },
+  "Blizzard Spell": {
+    "description": " Instantly changes the weather and makes it snow really hard, potentially allowing you to escape a difficult situation.",
+    "teaser": "My mother in law's soul in a bottle.",
+    "damage": 1,
+    "quality": 4,
+    "uses": 1
+  },
+  "Blood of the Trainborn": {
+    "description": " Allows you to use Shouts that summon different trains and heavily damage enemies.",
+    "teaser": "Legend speaks of one with the blood of the trains running through their veins...",
+    "damage": 1,
+    "quality": 5,
+    "uses": -1
+  },
+  "Bong": {
+    "description": " Requires a large amount marijuana to use as fuel. When used, temporarily triples your Coolness for the duration of the world. ",
+    "teaser": "Dude, this party is so lit!",
+    "damage": 1,
+    "quality": 4,
+    "uses": 0
+  },
+  "Bow": {
+    "description": "A 5 base damage ranged weapon. Requires a turn to nock and arrows to fire.",
+    "teaser": "Arrows not included.",
+    "damage": 1,
+    "quality": 4,
+    "uses": 0
+  },
+  "Chemistry Lab Kit": {
+    "description": "A 5-pack of test tubes containing mysterious chemicals A, B, C, D, and E. They are not labeled. You can combine these chemicals, consuming them and providing mysterious, extremely powerful effects -- positive and negative!. ",
+    "teaser": "Let's mix random chemicals together! What could go wrong???",
+    "damage": 1,
+    "quality": 3,
+    "uses": 2
+  },
+  "Chicken": {
+    "description": "You can kill this and cook its meat to get an actually useful item. Otherwise, it is a 1 health pet.",
+    "teaser": "Legend says this creature is the closest relative of the T-Rex.",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Cure to Cancer": {
+    "description": " Martin Cooper was forced to invent this item after he was sued for selling people cell phones that cause cancer. Once used, the user will automatically full heal at the end of each world. ",
+    "teaser": "This will bankrupt the pharmaceutical companies...",
+    "damage": 1,
+    "quality": 5,
+    "uses": 1
+  },
+  "Dinosaur Bone": {
+    "description": "Increases your coolness by 10, but only in checks against dogs.",
+    "teaser": "Did someone steal this from a museum?",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Dinosaur Meat": {
+    "description": " Feeding dinosaur meat to a carnivorous dinosaur has a 10% chance to 'tame' it. It will not follow commands but it will follow the party around and probably maul everyone it encounters. As long as it is constantly fed, it will (probably) not attack the party. ",
+    "teaser": "The existence of this item implies that there are dinosaurs running around somewhere, which is not a fun thought.",
+    "damage": 1,
+    "quality": 3,
+    "uses": 1
+  },
+  "Duel Gun": {
+    "description": " This gun can only be used to initiate a duel against any other character, who must also have a gun. There is a 50% chance of that character dying and a 50% chance of the user of this item dying, regardless of stats. You can use this any number of times.",
+    "teaser": "You looked at my girlfriend! Prepare to die!",
+    "damage": 1,
+    "quality": 3,
+    "uses": -1
+  },
+  "EMP": {
+    "description": " A bomb that knocks out all electricity in the world. This item will instakill all robots and break all mechanical items. ",
+    "teaser": "It's like a nuke but better!",
+    "damage": 1,
+    "quality": 4,
+    "uses": 1
+  },
+  "Football Helmet": {
+    "description": " Protects you from one hit that would normally kill you. Breaks when this effect triggers.",
+    "teaser": "Doesn't actually protect you from concussions, but don't tell the sponsors that.",
+    "damage": 1,
+    "quality": 4,
+    "uses": -1
+  },
+  "Fossilizer": {
+    "description": "Having this item in your inventory permanently changes your first trait to Fossil Maniac. Losing this item changes your trait to Suicidal.",
+    "teaser": "This item makes you LOVE fossils.",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Furry-Be-Gone Spray": {
+    "description": " This canister omits a noxious smell that will drive all furries out of the current world. ",
+    "teaser": "Begone furries!",
+    "damage": 1,
+    "quality": 4,
+    "uses": 1
+  },
+  "Genius Project": {
+    "description": " Allows you to trade stat points for items. 1 stat point = 3 random items.",
+    "teaser": "No...Please have mercy...",
+    "damage": 1,
+    "quality": 3,
+    "uses": -1
+  },
+  "Giant Cell Phone": {
+    "description": " Can be used as a blunt weapon doing 2 base damage. It can also make calls, very slowly. ",
+    "teaser": "It weighs 50 pounds.",
+    "damage": 2,
+    "quality": 1,
+    "uses": -1
+  },
+  "Gun": {
+    "description": " Bullets not included. 12 base damage; fires from a range. ",
+    "teaser": "Bang bang shoot shoot",
+    "damage": 12,
+    "quality": 4,
+    "uses": -1
+  },
+  "Ice Pack": {
+    "description": " Restores 10 health. ",
+    "teaser": "Flashbacks to the nurse's office in 5th grade...",
+    "damage": 1,
+    "quality": 4,
+    "uses": 1
+  },
+  "Key to Martin Cooper's House": {
+    "description": "Allows the massive locked door of Martin Cooper's House to be opened.",
+    "teaser": "Ever wanted to do a break-in? You're in luck!",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Lawyer": {
+    "description": "This guy's top-notch. He can defend you in any court of law and get you off for any crime, scot-free. A bit pricey though...",
+    "teaser": "Ladies and gentlemen of the jury...",
+    "damage": 1,
+    "quality": 5,
+    "uses": -1
+  },
+  "Liz": {
+    "description": "Liz is a chameleon pet with 10 health and sharp teeth that deal 6 damage. She can disguise herself and unleash a surprise attack that is guaranteed to do damage.",
+    "teaser": "Ms. Frizzle is going to be pretty mad when she sees that Liz is missing...",
+    "damage": 1,
+    "quality": 5,
+    "uses": -1
+  },
+  "Lost and Found": {
+    "description": " You can carry the lost and found around with you. Every new world, a consumable item that was used in the last game will appear in it.",
+    "teaser": "So many old, unloved lunchboxes...",
+    "damage": 1,
+    "quality": 4,
+    "uses": -1
+  },
+  "Magic School Bus": {
+    "description": " A vehicle that carries the party inside. It has 100 health and has the power to shrink and grow on demand, as well as time travel. The party must leave the bus to take other actions.",
+    "teaser": "This bus's smile makes me uncomfortable sometimes. I wonder what it thinks about...",
+    "damage": 1,
+    "quality": 5,
+    "uses": -1
+  },
+  "Martin Cooper Gives You Cell Phone Lessons": {
+    "description": " Raises Smartness by 5. ",
+    "teaser": "I always wondered how cell phones worked!",
+    "damage": 1,
+    "quality": 5,
+    "uses": 1
+  },
+  "Mayor's Sash": {
+    "description": " The town in world 2 is strapped for cash and they are now selling their mayorship to anyone who will buy. Wearing this item causes all people in world 2 to think you are the mayor, providing +6 to smartness or coolness rolls to get them to follow orders.",
+    "teaser": "I love democracy.",
+    "damage": 1,
+    "quality": 4,
+    "uses": -1
+  },
+  "Mobile Data Plan": {
+    "description": " If you have a cell phone, this provides you with the answers to your questions anywhere you go. (+1 to smartness as long as both items are in inventory)",
+    "teaser": "How do they manage to have service everywhere? Are they implanting cell towers in people's heads?",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Ms. Frizzle's Hair Gel": {
+    "description": "1 use; increases Smartness by 1.",
+    "teaser": "Now your hair can be as great as hers! ",
+    "damage": 1,
+    "quality": 2,
+    "uses": 1
+  },
+  "Pizza": {
+    "description": " Restores 10 health when eaten. The health restored can be split among the party any way you like.",
+    "teaser": "Combining this with a pineapple may cause the world to implode.",
+    "damage": 1,
+    "quality": 3,
+    "uses": 1
+  },
+  "Quicksand Seed": {
+    "description": " Placing this highly illegal item in any body of sand will suck anyone touching that body of sand into it, presumably killing them. ",
+    "teaser": "It's a tiny seed. Looks completely harmless.",
+    "damage": 1,
+    "quality": 5,
+    "uses": 1
+  },
+  "Rail Sword": {
+    "description": " An electrified rail that has been transformed into a weapon. Base 20 damage. ",
+    "teaser": "Someone ripped up a subway track to make this weapon. Don't go riding any trains anytime soon...",
+    "damage": 20,
+    "quality": 5,
+    "uses": -1
+  },
+  "School Sweatshirt": {
+    "description": "Lowers your Coolness by 1 and raises your Smartness by 2 when worn. ",
+    "teaser": "Go Bobcats!",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Spirit of the West": {
+    "description": " This ancient ghost will turn your entire adventure into a Western. Enemies have increased difficulty (in particular,they all spawn with weapons) but 5x the gold. ",
+    "teaser": "YEE HAW!",
+    "damage": 1,
+    "quality": 5,
+    "uses": -1
+  },
+  "T-Rex": {
+    "description": " You can straight up add a T-Rex to the party. (Stats 24 / -1 / 10)",
+    "teaser": "RAWR",
+    "damage": 1,
+    "quality": 5,
+    "uses": 1
+  },
+  "Terrible Lawyer": {
+    "description": " You can make him defend you in a court of law or just command him to fight people, and he will try his best. (1/1/1 stats; will not join party.)",
+    "teaser": "He is a registered lawyer in Arkansas, or at least he was before people found out he cheated on the exam.",
+    "damage": 1,
+    "quality": 2,
+    "uses": 1
+  },
+  "Textbook": {
+    "description": "Prevents you from getting yelled at if you show up to class.",
+    "teaser": "Don't show up to class without this!",
+    "damage": 1,
+    "quality": 1,
+    "uses": -1
+  },
+  "Train Car": {
+    "description": " Provides you with 3 extra inventory slots, but it's really heavy. Requires either some sort of vehicle or 21 strongness to lug around with you; cannot be contained in a normal inventory slot.",
+    "teaser": "Choo choo!",
+    "damage": 1,
+    "quality": 2,
+    "uses": -1
+  },
+  "Vape": {
+    "description": "Allows you to vape, providing +1 to your next roll. Every time you vape, you have a 1 in 100 chance of having your first trait change to Addict. Lasts for 10 uses. Simply possessing this item increases Coolness by 1. ",
+    "teaser": "Vaping is cool!",
+    "damage": 1,
+    "quality": 2,
+    "uses": 10
   }
 }

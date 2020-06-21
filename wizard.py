@@ -4,6 +4,7 @@ import shared_functions
 from shared_functions import party as party
 from bot import bot as bot
 
+
 def stat_wizard(message, wizard_data):
     try:
         stat = int(message.content)
@@ -25,6 +26,7 @@ def stat_wizard(message, wizard_data):
 
 
 def trait_wizard(message, wizard_data):
+    # TODO: Rework trait wizard to work with new traits
     response = ""
     if wizard_data["Phase"] == "Coolness":
         filename = "traits.json"
@@ -149,5 +151,12 @@ async def on_message(message):
             party[wizard_data["Short name"]] = character_dict
             shared_functions.backup_characters()
             wizards.pop(user_discriminator)
+    # TODO: Add starting item functionality to trait wizard. Allow stats to be gambled for the possibility to reroll.
+    #  Use the randitem function to easily print and just fetch item names from ** for checking.
     shared_functions.backup_wizards(wizards)
     await bot.process_commands(message)
+
+# TODO: Rework cursed item descriptions to be nondescriptive. Perhaps allow multiple descriptions?
+#  Or item choice w/o desc.
+
+# TODO: Add an item creation wizard.

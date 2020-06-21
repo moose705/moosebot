@@ -1,3 +1,5 @@
+
+"""
 # i wrote these functions and no longer need them
 
 # sometimes i regret these decisions and want to go back and re use something old so they are preserved here, dead, forever
@@ -60,3 +62,62 @@ if stat not in ["Strongness", "Coolness", "Smartness", "Health", "Gold"]:
         else:
           await message.channel.send("Trait not recognized as one of the options. Make sure you sent it exactly as shown, as I am a stupid robot.")
           return
+
+
+@bot.command(name='addchartrait', aliases=["addtrait", "givetrait"])
+async def add_trait_to_char(ctx, name, trait):
+    # Only the first two traits will be printed
+    # This is a really useless command
+    character = shared_functions.find_character(name)
+    if not character:
+        await ctx.send("Character does not exist.")
+    character["Traits"].append(trait)
+    response = characters.print_character(name)
+    await ctx.send(embed=response)
+
+
+@bot.command(name='addchar')
+async def add_char(ctx, shortname, name, backstory=None, health=None, gold=None, strongness=None, smartness=None,
+                   coolness=None, trait1=None, trait2=None, blessing=None, inventory1=None, inventory2=None,
+                   inventory3=None):
+    name = name.replace("±", " ")
+    add_character(shortname)
+    change_character_data(shortname, "Name", name)
+    name = shortname
+    if backstory:
+        backstory = backstory.replace("±", " ")
+        change_character_data(name, "Backstory", backstory)
+    if health:
+        change_character_data(name, "Health", health)
+    if gold:
+        change_character_data(name, "Gold", gold)
+    if strongness:
+        change_character_data(name, "Strongness", strongness)
+    if smartness:
+        change_character_data(name, "Smartness", smartness)
+    if coolness:
+        change_character_data(name, "Coolness", coolness)
+    if trait1:
+        trait1 = trait1.replace("±", " ")
+        party[name]["Traits"].append(trait1)
+    if trait2:
+        trait2 = trait2.replace("±", " ")
+        party[name]["Traits"].append(trait2)
+    if blessing:
+        blessing = blessing.replace("±", " ")
+        party[name]["Blessing"] = blessing
+    if inventory1:
+        inventory1 = inventory1.replace("±", " ")
+        party[name]["Inventory"][0] = inventory1
+    if inventory2:
+        inventory2 = inventory2.replace("±", " ")
+        party[name]["Inventory"][1] = inventory2
+    if inventory3:
+        inventory3 = inventory3.replace("±", " ")
+        party[name]["Inventory"][2] = inventory3
+    party[name]["Color"] = shared_functions.random_color()
+    response = 'Successfully added character'
+    shared_functions.backup_characters()
+    await ctx.send(response)
+
+"""

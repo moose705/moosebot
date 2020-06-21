@@ -102,7 +102,7 @@ Backstories = [
     "When they were a child, an oracle prophecized that they would slowly lose all of their senses. So far they have only lost taste and smell, but they are horribly afraid of what will happen next. ",
     "Ogres are like onions. If you cut them, they will make you cry. Actually they will probably just make you cry anyway. "
 ]
-
+# TODO: Identify all items mistakenly not included by script and implement them as well.
 GodlyItems = [
     "**Batteries**: Power any electronic item! (Will eventually run out depending on item's power consumption.)",
     "**Thanksgiving Feast**: One-use. Fully heals the entire party.",

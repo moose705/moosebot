@@ -8,6 +8,7 @@ import names
 import wizard
 import sys
 import characters
+import items
 
 # below: laziness
 from shared_functions import party as party
@@ -25,11 +26,15 @@ load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
 
-
 # Party & NPC Management
+
+next_backstory = None
+next_name = None
+next_short_name = None
 
 @bot.command(name='countitems')
 async def count_items(ctx):
+    # TODO: Update countitems
     num_items = len(random_lists.GoodItems) + len(random_lists.GodlyItems) + len(random_lists.GreatItems) + len(
         random_lists.MehItems) + len(random_lists.AwfulItems) + len(random_lists.CursedItems)
     await ctx.send("There are " + str(num_items) + " items currently in the item pool.")
@@ -87,7 +92,7 @@ async def add_item(ctx, name, item):
 
 
 @bot.command(name='removeitem', aliases=["take", "drop"])
-async def add_item(ctx, name, item):
+async def remove_item(ctx, name, item):
     character = shared_functions.find_character(name)
     if not character:
         await ctx.send("Character does not exist!")
@@ -104,23 +109,9 @@ async def add_item(ctx, name, item):
     await ctx.send(embed=characters.print_character(name))
 
 
-@bot.command(name='buy', aliases=["spend", "purchase"])
-async def buy(ctx, name, gold):
-    gold = int(gold)
-    character = shared_functions.find_character(name)
-    if not character:
-        await ctx.send("Character " + name + " does not exist!")
-        return
-    if gold > int(character["Gold"]):
-        await ctx.send("Not enough gold!")
-        return
-    character["Gold"] = str(int(character["Gold"]) - gold)
-    await ctx.send(embed=characters.print_character(name))
-
-
 @bot.command(name='pay', aliases=["givemoney", "givegold"])
 async def pay(ctx, name, gold):
-    await buy(ctx, name, -int(gold))
+    await increase(ctx, name, "Gold", int(gold))
 
 
 @bot.command(name='increase', aliases=["increasestat", "boost", "booststat"])
@@ -169,7 +160,8 @@ async def heal(ctx, name, number=None):
         if not character:
             await ctx.send("Character " + name + " does not exist, dummy")
             return
-        # hardcoded max health right now; will eventually need to change to a character["Max Health"] attribute if i implement things like Blessing of Bloat
+        # hardcoded max health right now; will eventually need to change to a character["Max Health"] attribute if i
+        # implement things like Blessing of Bloat
         characters.change_character_data(name, "Health", 2 * character["Strongness"] + 1)
         await ctx.send(embed=characters.print_character(name))
 
@@ -268,21 +260,10 @@ async def combat(ctx, name, weapon_damage, target, global_modifier=0, stat="Stro
             await ctx.send("A critical hit!")
 
 
-@bot.command(name='addchartrait', aliases=["addtrait", "givetrait"])
-async def add_trait_to_char(ctx, name, trait):
-    # Only the first two traits will be printed
-    # This is a really useless command
-    character = shared_functions.find_character(name)
-    if not character:
-        await ctx.send("Character does not exist.")
-    character["Traits"].append(trait)
-    response = characters.print_character(name)
-    await ctx.send(embed=response)
-
-
 @bot.command(name='killchar', aliases=["kill", "nuke"])
 async def kill_char(ctx, name):
     # Can't refactor this to use shared_functions.find_character because I need to know which dictionary to pop from
+    # TODO: Have a character drop their entire inventory upon being killed, activating any explosives
     try:
         is_npc = False
         dead_guy_name = party[name]["Name"]
@@ -389,28 +370,8 @@ async def inventory_size(ctx, name, size):
     else:
         await ctx.send("Character already has inventory of size " + size + ".")
         return
+    # TODO: Make it optional to print entire embed in all functions
     await ctx.send(embed=characters.print_character(name))
-
-
-@bot.command(name='randitem')
-async def random_item(ctx, modifier=0, number=1):
-    for i in range(0, number):
-        modifier += world["modifier"]
-        roll = random.randint(1, 20)
-        if roll != 1 and roll != 20:
-            roll += modifier
-        if roll <= 1:
-            await ctx.send(random.choice(random_lists.CursedItems))
-        elif roll < 6:
-            await ctx.send(random.choice(random_lists.AwfulItems))
-        elif roll < 11:
-            await ctx.send(random.choice(random_lists.MehItems))
-        elif roll < 16:
-            await ctx.send(random.choice(random_lists.GoodItems))
-        elif roll < 20:
-            await ctx.send(random.choice(random_lists.GreatItems))
-        else:
-            await ctx.send(random.choice(random_lists.GodlyItems))
 
 
 @bot.command(name='restart')
@@ -437,6 +398,8 @@ async def advance(ctx, reset=False):
 
 @bot.command(name='randchar')
 async def random_char(ctx, boss=False):
+    # TODO: Randchar -- use new item and trait system
+    # TODO: Randchar -- give spawned NPCs random items under modified roll system
     if boss:
         stat_cap = world["boss stat cap"]
     else:
@@ -457,6 +420,7 @@ async def random_char(ctx, boss=False):
         next_short_name = None
     else:
         first_name = random.choice(names.Names)
+        # TODO: Check for name duplication in random npc generation. This can corrupt current NPCs in testing!
     while first_name in npcs:
         # should have above ~10 lines in a while loop forcing regeneration of duplicate names
         first_name = random.choice(names.Names)
@@ -506,7 +470,7 @@ async def random_char(ctx, boss=False):
     inventory = []
     for i in range(0, 3):
         if random.randint(1, 4) == 1:
-            inventory.append("????")
+            inventory.append((await items.random_item(ctx, 0, 1, False)).name)
         else:
             inventory.append("Empty slot")
     if boss:
@@ -543,5 +507,44 @@ async def encounter(ctx):
         await random_boss(ctx)
     else:
         await random_char(ctx)
+
+
+@bot.command(name="sell")
+async def sell(ctx, character_name, item_name, show_price=False):
+    # TODO: Add support to attempt to sell an item to an NPC.
+    character = shared_functions.find_character(character_name)
+    if not character:
+        await ctx.send("No character named " + character_name)
+        return
+    if item_name not in items.item_dict.keys():
+        await ctx.send("No item named " + item_name)
+        return
+    if item_name not in character["Inventory"]:
+        await ctx.send(character_name + " does not have " + item_name + " in their inventory!")
+        return
+    item = items.item_dict[item_name]
+    if item.quality == 0:
+        price = 0
+    elif item.quality == 1:
+        price = 1
+    elif item.quality == 2:
+        price = 10
+    elif item.quality == 3:
+        price = 50
+    elif item.quality == 4:
+        price = 100
+    elif item.quality == 5:
+        price = 1000
+    if show_price:
+        await ctx.send("Selling this item will net you ", price, " gold.")
+    else:
+        character["Gold"] += price
+        await remove_item(ctx, character_name, item_name)
+    shared_functions.backup_characters()
+
+    # Selling to NPC:
+        # Good roll: NPC will buy for close to full price if they have enough gold, and tell you 'I can't afford that' otherwise.
+        # Bad roll: NPC will buy for low price close to store price. If NPC doesn't have enough gold still, they will offer all their gold.
+    pass
 
 bot.run(TOKEN)
