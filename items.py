@@ -19,7 +19,7 @@ item_dict_list = [cursed_item_dict, awful_item_dict, meh_item_dict, good_item_di
 
 for item in items.keys():
     item_dict[item] = classes.Item(item, items[item]["description"], items[item]["teaser"], items[item]["damage"],
-                                   items[item]["quality"], items[item]["uses"])
+                                   items[item]["quality"], items[item]["type"])
     item_dict_list[item_dict[item].quality][item] = item_dict[item]
 
 # how many items per shop?
@@ -28,7 +28,6 @@ NUM_ITEMS = 5
 
 @bot.command(name='randitem')
 async def random_item(ctx, modifier=0, number=1, print_items=True):
-    # TODO: Implement secondary, useless descriptions
     # TODO: Implement a global roll function
     return_list = []
     for i in range(0, number):
@@ -66,32 +65,30 @@ async def generate_shop(ctx):
 
     # Modifier in world 1 and 2: -4 (World mod: 1; thus, -5)
     # Modifier in world 3 and 4: -3 (World mod: 0, thus, -3)
-    # Modifier in world 5 and 6: -2 (World mod, -1, thus, -1
+    # Modifier in world 5 and 6: -2 (World mod, -1, thus, -1)
     # Modifier in world 7 and 8: -1 (World mod: -2, thus, +1)
     # Modifier in world 9 onwards: 0 (World mod: -3, thus, +3)
-    items = await random_item(ctx, 2 * int((world["number"] - 1) / 2) - 5, NUM_ITEMS, False)
+    shop_items = await random_item(ctx, 2 * int((world["number"] - 1) / 2) - 5, NUM_ITEMS, False)
     shop_list = []
-    for item in items:
-        if item.quality == 0:
+    for shop_item in shop_items:
+        if shop_item.quality == 0:
             price = random.randint(1, 10000)
-        elif item.quality == 1:
+        elif shop_item.quality == 1:
             price = random.randint(1, 100)
-        elif item.quality == 2:
+        elif shop_item.quality == 2:
             price = random.randint(100, 500)
-        elif item.quality == 3:
+        elif shop_item.quality == 3:
             price = random.randint(500, 1000)
-        elif item.quality == 4:
+        elif shop_item.quality == 4:
             price = random.randint(1000, 5000)
-        elif item.quality == 5:
+        elif shop_item.quality == 5:
             price = random.randint(10000, 50000)
-        item_dict[item.name].last_price = price
-        shop_list.append((price, "***" + str(price) + " gold -*** " + item.print_teaser()))
+        item_dict[shop_item.name].last_price = price
+        shop_list.append((price, "***" + str(price) + " gold -*** " + shop_item.print_teaser()))
     shop_list = sorted(shop_list, key=lambda x: x[0])
     for price_and_item in shop_list:
         await ctx.send(price_and_item[1])
 
-    # TODO: For Buy command, we can update a last_price parameter for each shop-generated item in the session.
-    #     Note this will break if the bot restarts, but there is a 2-command solution still.
     # We can pass a modifier to randitem so use it that way.
     # Shop additionally needs to determine and print a price, though. It can do that by checking quality of its
     # desired item.
@@ -120,6 +117,4 @@ async def buy(ctx, name, item_name):
     character["Gold"] = character["Gold"] - gold
     await ctx.send(embed=characters.print_character(name))
 
-# TODO: Apparently modifying list during iteration will break iterators even for a minor change.
-#  I'm not sure if I do this, but going over each for loop in every function seems worth doing at some point.
 

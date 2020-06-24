@@ -1,26 +1,22 @@
-import json
 import os
 import random
-import outcome_tables
-import discord
-import random_lists
-import names
-import wizard
 import sys
+
+from dotenv import load_dotenv
+
 import characters
 import items
-
-# below: laziness
+import names
+import random_lists
+import shared_functions
+import traits
+import wizard
+from bot import bot as bot
 from shared_functions import party as party
 from shared_functions import npcs as npcs
 from shared_functions import world as world
 
-import shared_functions
-import stat_commands
-import old_commands
-from bot import bot as bot
-from discord.ext import commands
-from dotenv import load_dotenv
+# below: laziness
 
 load_dotenv()
 
@@ -32,12 +28,10 @@ next_backstory = None
 next_name = None
 next_short_name = None
 
+
 @bot.command(name='countitems')
 async def count_items(ctx):
-    # TODO: Update countitems
-    num_items = len(random_lists.GoodItems) + len(random_lists.GodlyItems) + len(random_lists.GreatItems) + len(
-        random_lists.MehItems) + len(random_lists.AwfulItems) + len(random_lists.CursedItems)
-    await ctx.send("There are " + str(num_items) + " items currently in the item pool.")
+    await ctx.send("There are " + str(len(items.item_dict)) + " items currently in the item pool.")
 
 
 @bot.command(name='countbackstories')
@@ -51,6 +45,10 @@ async def next_name_function(ctx, name):
     global next_short_name
     global next_name
     next_short_name = name.split(" ")[0]
+    if shared_functions.find_character(next_short_name) is not None:
+        await ctx.send("A character already exists with the name " + next_short_name + ".")
+        next_short_name = None
+        return
     next_name = name
 
 
@@ -58,21 +56,6 @@ async def next_name_function(ctx, name):
 async def next_backstory_function(ctx, backstory):
     global next_backstory
     next_backstory = backstory
-
-
-@bot.command(name='changeblessing')
-async def change_blessing(ctx, name, blessing):
-    blessing = blessing.replace("±", " ")
-    blessings_dict = shared_functions.get_dict_from_json("blessings.json")
-    character = shared_functions.find_character(name)
-    if not character:
-        await ctx.send("Character does not exist")
-        return
-    if blessing not in blessings_dict:
-        await ctx.send("Blessing does not exist or is not unlocked")
-        return
-    character["Blessing"] = "**Blessing of " + blessing + "**: " + blessings_dict[blessing]
-    await ctx.send(embed=characters.print_character(name))
 
 
 @bot.command(name='additem', aliases=["item"])
@@ -111,7 +94,7 @@ async def remove_item(ctx, name, item):
 
 @bot.command(name='pay', aliases=["givemoney", "givegold"])
 async def pay(ctx, name, gold):
-    await increase(ctx, name, "Gold", int(gold))
+    await increase(ctx, name, "Gold", gold)
 
 
 @bot.command(name='increase', aliases=["increasestat", "boost", "booststat"])
@@ -147,7 +130,7 @@ async def decrease(ctx, name, stat, number):
 async def damage(ctx, name, number):
     await decrease(ctx, name, "Health", number)
     character = shared_functions.find_character(name)
-    if character and character["Health"] < 0:
+    if character and character["Health"] <= 0:
         await kill_char(ctx, name)
 
 
@@ -262,23 +245,24 @@ async def combat(ctx, name, weapon_damage, target, global_modifier=0, stat="Stro
 
 @bot.command(name='killchar', aliases=["kill", "nuke"])
 async def kill_char(ctx, name):
-    # Can't refactor this to use shared_functions.find_character because I need to know which dictionary to pop from
-    # TODO: Have a character drop their entire inventory upon being killed, activating any explosives
-    try:
-        is_npc = False
-        dead_guy_name = party[name]["Name"]
-    except KeyError:
-        try:
-            dead_guy_name = npcs[name]["Name"]
-            is_npc = True
-        except KeyError:
-            await ctx.send("Could not find party member or NPC named " + name)
-    if not is_npc and party.pop(name, False):
-        response = "**" + dead_guy_name + " has been slain.**"
-    elif is_npc and npcs.pop(name, False):
-        response = "**" + dead_guy_name + " has been slain.**"
+    # TODO: Have a character drop their entire inventory upon being killed, activating any explosives.
+    #  It would be pretty comical to randomly trigger %use (prompting for a target if necessary).
+
+    # TODO: File away deceased characters in an additional dictionary for use with Necromancer.
+    character = shared_functions.find_character(name)
+    if not character:
+        await ctx.send("Could not find party member or NPC named " + name)
+        return
+    if name in npcs.keys():
+        relevant_dict = npcs
     else:
-        response = "Could not find character"
+        relevant_dict = party
+    # later: add to necromancy dictionary
+    response = "**" + relevant_dict[name]["Name"] + " has been slain.**"
+    for item in relevant_dict[name]["Inventory"]:
+        if item != "Empty slot":
+            response += "\nThe following item dropped: " + items.item_dict[item].print_teaser()
+    relevant_dict.pop(name, False)
     shared_functions.backup_characters()
     await ctx.send(response)
 
@@ -300,7 +284,11 @@ async def npc(ctx, name=None):
         length = str(len(npcs.keys()))
         await ctx.send("There are currently " + length + " NPCs in the pool.")
         return
-    await ctx.send(embed=characters.print_character(name))
+    if name == "all":
+        for character in npcs:
+            await ctx.send(embed=characters.print_character(character))
+    else:
+        await ctx.send(embed=characters.print_character(name))
 
 
 @bot.command(name='randnpc')
@@ -370,7 +358,6 @@ async def inventory_size(ctx, name, size):
     else:
         await ctx.send("Character already has inventory of size " + size + ".")
         return
-    # TODO: Make it optional to print entire embed in all functions
     await ctx.send(embed=characters.print_character(name))
 
 
@@ -398,8 +385,6 @@ async def advance(ctx, reset=False):
 
 @bot.command(name='randchar')
 async def random_char(ctx, boss=False):
-    # TODO: Randchar -- use new item and trait system
-    # TODO: Randchar -- give spawned NPCs random items under modified roll system
     if boss:
         stat_cap = world["boss stat cap"]
     else:
@@ -420,10 +405,8 @@ async def random_char(ctx, boss=False):
         next_short_name = None
     else:
         first_name = random.choice(names.Names)
-        # TODO: Check for name duplication in random npc generation. This can corrupt current NPCs in testing!
-    while first_name in npcs:
-        # should have above ~10 lines in a while loop forcing regeneration of duplicate names
-        first_name = random.choice(names.Names)
+        while first_name in npcs.keys():
+            first_name = random.choice(names.Names)
     if next_name:
         full_name = next_name
         next_name = None
@@ -456,39 +439,33 @@ async def random_char(ctx, boss=False):
         blessing = "No blessing"
     else:
         blessing = "**Blessing of " + blessing_name + "** " + blessing_level
-    traits_json = open("traits.json", "r")
-    traits_json_string = traits_json.read()
-    traits_json.close()
-    traits_dict = json.loads(traits_json_string)
-    trait1 = random.choice(list(traits_dict.keys()))
+    trait1 = random.choice(list(traits.trait_dict.keys()))
     trait2 = trait1
     while trait2 == trait1:
-        trait2 = random.choice(list(traits_dict.keys()))
-    trait1 = "**" + trait1 + "**: " + traits_dict[trait1]
-    trait2 = "**" + trait2 + "**: " + traits_dict[trait2]
+        trait2 = random.choice(list(traits.trait_dict.keys()))
     color_string = shared_functions.random_color()
     inventory = []
     for i in range(0, 3):
         if random.randint(1, 4) == 1:
-            inventory.append((await items.random_item(ctx, 0, 1, False)).name)
+            inventory.append((await items.random_item(ctx, -2 * world["number"], 1, False)).name)
         else:
             inventory.append("Empty slot")
     if boss:
         backstory = random.choice(random_lists.BossBackstories)
-        trait1 = random.choice(random_lists.BossTraits)
+        trait1 = random.choice(list(traits.boss_trait_dict.keys()))
         health *= (5 * world["number"])
         gold *= (world["number"] * world["number"])
         full_name = "*Boss:* " + full_name
         secondary_trait_roll = random.randint(1, 20)
         if secondary_trait_roll <= world["number"]:
-            trait2 = random.choice(random_lists.BossTraits)
+            trait2 = random.choice(traits.boss_trait_dict)
             while trait1 == trait2:
-                trait2 = random.choice(random_lists.BossTraits)
+                trait2 = random.choice(traits.boss_trait_dict)
     character = {"Backstory": backstory, "Name": full_name, "Traits": [trait1, trait2], "Smartness": smartness,
                  "Coolness": coolness, "Strongness": strongness, "Health": health, "Gold": gold, "Color": color_string,
                  "Inventory": inventory, "Blessing": blessing}
-    await ctx.send(embed=characters.print_character(first_name, character))
     npcs[first_name] = character
+    await ctx.send(embed=characters.print_character(first_name))
     shared_functions.backup_characters()
 
 
@@ -542,9 +519,24 @@ async def sell(ctx, character_name, item_name, show_price=False):
         await remove_item(ctx, character_name, item_name)
     shared_functions.backup_characters()
 
-    # Selling to NPC:
-        # Good roll: NPC will buy for close to full price if they have enough gold, and tell you 'I can't afford that' otherwise.
-        # Bad roll: NPC will buy for low price close to store price. If NPC doesn't have enough gold still, they will offer all their gold.
-    pass
+    # Selling to NPC: Good roll: NPC will buy for close to full price if they have enough gold, and tell you 'I can't
+    # afford that' otherwise. Bad roll: NPC will buy for low price close to store price. If NPC doesn't have enough
+    # gold still, they will offer all their gold.
+
+
+@bot.event
+async def on_message(message):
+    # Currently, if the bot is down, it will not check the channel history to see if it missed any inputs
+    # while it was down. This is not too hard to do (save the message ID of the latest read message in the JSON,
+    # then get history in this channel since that message and iterate through all missed messages on boot,
+    # disregarding all but the first from each user).
+
+    # If there is ever a need for message-by-message scanning, the wizard can be safely tucked into a function and left
+    #  in wizards.py, with the actual event moved to main.
+
+    if message.channel.id == 714589518983987212 or message.channel.id == 714628821646835889:
+        await wizard.wizard_main(message)
+    await bot.process_commands(message)
+
 
 bot.run(TOKEN)

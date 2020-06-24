@@ -3,9 +3,9 @@ import random
 
 
 def random_color():
-    HEX_CHARS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
+    hex_characters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
     color_string = ""
-    return color_string.join(random.choices(HEX_CHARS, k=6))
+    return color_string.join(random.choices(hex_characters, k=6))
 
 
 def get_dict_from_json(name):
@@ -21,6 +21,7 @@ def get_dict_from_json(name):
 party = get_dict_from_json("party.json")
 npcs = get_dict_from_json("npcs.json")
 world = get_dict_from_json("world.json")
+
 
 def dict_to_json(dict_i, json_i):
     json_file = open(json_i, "w")

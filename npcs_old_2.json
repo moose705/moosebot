@@ -1,0 +1,562 @@
+{
+  "Adahn": {
+    "Backstory": "This friendly slime alien had dreams of being a pod racer someday, but then he was kidnapped by a maniac seeking El Dorado, who died and left him to be burned alive. He survived that, but later a different maniac seeking El Dorado knocked him out and robbed him. Now he seeks revenge on all El Dorado parties for the rest of time.",
+    "Name": "Adahn Elriot",
+    "Traits": [
+      "**Stealth**:  This character can sneak around without being seen and listen in on others.",
+      "**Doctor**:  Once per day, with or without permission, can use their 'expertise' in 'medicine' on any player. (Cure ailments, Patch wounds, perform surgery (plastic, medical, gender reassignment), etc.)"
+    ],
+    "Smartness": 0,
+    "Coolness": 5,
+    "Strongness": 1,
+    "Health": 3,
+    "Gold": 3,
+    "Color": "01a171",
+    "Inventory": [
+      "El Dorado Party Murdering Space Blaster",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "No blessing"
+  },
+  "Big": {
+    "Name": "Big Java",
+    "Strongness": 6,
+    "Coolness": 6,
+    "Smartness": 6,
+    "Traits": [
+      "**Seinfeld**:  Power over bees and bee movies",
+      "**Mexican**:  Can use taco magic. Not necessarily controlled by Satan, but stats are still 6/6/6. Is really good at gardening (totally not racist)."
+    ],
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Homeownership** - It turns out that even once you get your family a huge ass mansion, you still want more.",
+    "Color": "233d1f",
+    "Health": 13,
+    "Gold": 6,
+    "Backstory": "Leader of a rich family of warlords, and famed as the leader of one of the only groups of people to ever reach El Dorado."
+  },
+  "Billiamina": {
+    "Backstory": "One of the most dangerous shapeshifters in the universe. She speaks to the dead and often takes their form, but the real danger is how insanely cool she is. Many trends mysteriously start and turn out to have been Billiamina's fault the whole time.",
+    "Name": "Billiamina",
+    "Traits": [
+      "**Lightwarder** - Able to call upon the holy light to smite foes, as well as heal and empower allies.",
+      "**Hexxer**:  Able to call upon departed spirits, and ancient dieties to curse one's enemies."
+    ],
+    "Smartness": 0,
+    "Coolness": 6,
+    "Strongness": 12,
+    "Health": 1,
+    "Gold": 35,
+    "Color": "a35720",
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Makeup Level II** - You are never beautiful enough. You randomly and uncontrollably shapeshift every so often. This may affect your stats."
+  },
+  "Blob": {
+    "Name": "Blob Slave",
+    "Strongness": 4,
+    "Coolness": 5,
+    "Smartness": 5,
+    "Traits": [
+      "**Inventor**:  Can spontaneously create idiotic (but still functional) inventions with random crap they find on the ground.",
+      "**German**: Enhances all stats by 3 when drinking beer and boosts rolls when weaponising stupid things"
+    ],
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Makeup Level II**: You are never beautiful enough. You randomly and uncontrollably shapeshift every so often. This may affect your stats.",
+    "Color": "eb1273",
+    "Health": 9,
+    "Gold": 96,
+    "Backstory": "Cons people like there's no tomorrow. Basically has no moral code. Upon finding out that the blob could change traits, decided to grind RNG for 17 hours until he got the ones he wanted. What a god."
+  },
+  "Chad": {
+    "Traits": [
+      "**Alchemist**: Can combine any two inventory items. Results are not guaranteed to be useful.",
+      "**Creepy** - Creeps out characters, preventing them from being added to the party. Also creeps out bosses, allowing the party to completely skip all boss fights except the El Dorado boss."
+    ],
+    "Blessing": "**Blessing of Drumming**: Chad's Drumset functions as a powerful 8 base damage weapon that strikes the entire party at once, but only when he is using it.",
+    "Inventory": [
+      "Bagpipes",
+      "Koran",
+      "Drumset"
+    ],
+    "Backstory": "Chad Gaylord Smith (born October 25, 1961) is an American musician who has been the drummer of the band Red Hot Chili Peppers since 1988. The group was inducted into the Rock and Roll Hall of Fame in 2012. Smith is also the drummer of the hard rock supergroup Chickenfoot, formed in 2008, and of the all-instrumental outfit Chad Smith's Bombastic Meatbats, formed in 2007. On his journey to El Dorado, he discovered his love for alchemy.",
+    "Name": "Chad Gaylord Smith",
+    "Health": 3,
+    "Gold": 0,
+    "Strongness": 12,
+    "Smartness": 12,
+    "Coolness": 2,
+    "Color": "07a6a4"
+  },
+  "Daddy": {
+    "Name": "Daddy Yankee",
+    "Strongness": 6,
+    "Coolness": 8,
+    "Smartness": 7,
+    "Traits": [
+      "**Sadist**:  This character loves seeing others in pain and gains stat points (+1, determined by teammate's highest stat) from injured party members.",
+      "**Average**:  Stats are determined by averaging other players' stats and rounding down. This continues the whole game, updating with each new stat change."
+    ],
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Cool Ranch**: Leads the Cool Ranch army.",
+    "Color": "676b44",
+    "Health": 12,
+    "Gold": 45,
+    "Backstory": "Literally what is the appeal of Nacho Cheese. We need to genocide everyone who likes that abomination of a flavor."
+  },
+  "Dmitriyev": {
+    "Backstory": "The smartest bear in the universe.",
+    "Name": "Dmitriyev",
+    "Traits": [
+      "**Irish**:  Can summon potatoes and Guinness, and can also see leprechauns out of the corner of their eye.",
+      "**Fragrant**: Smells nice. Coolness rolls can be 20% lower and still succeed."
+    ],
+    "Smartness": 4,
+    "Coolness": 8,
+    "Strongness": 10,
+    "Health": 7,
+    "Gold": 23,
+    "Color": "4111fb",
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "No blessing"
+  },
+  "Ekaterini": {
+    "Backstory": "It may seem hard to believe, but this...creature...was once famous blogger Dildo Swaggins. She became an alcoholic vlogger obsessed with guns, to the point where she is now literally a gun with legs.",
+    "Name": "Ekaterini Tikitiki",
+    "Traits": [
+      "**American**: Has access to a plethora of guns, is MORBIDLY obese, and has 2 intelligence subtracted baseline (points can still be allocated to even it out).",
+      "**Metal Skin:** Skin is made of some sort of metal (ex. steel, lead, or gold). Receives a health boost and some effects based on the type of metal. Still takes normal damage."
+    ],
+    "Smartness": 8,
+    "Coolness": 2,
+    "Strongness": 8,
+    "Health": 9,
+    "Gold": 49,
+    "Color": "b8fc31",
+    "Inventory": [
+      "Gun",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Makeup Level II:** You are never beautiful enough. You randomly and uncontrollably shapeshift every so often. This may affect your stats."
+  },
+  "Gustava": {
+    "Backstory": "Gustava feels like she got the short end of the shapeshifting stick. She married another invisible person and they go around stealing money. ",
+    "Name": "Gustava",
+    "Traits": [
+      "**Invisible** - Cannot be seen by anyone. Still can act as normal, just with a 1000% Dodge chance",
+      "**Gold Digger**: She has a loving husband. They are very rich."
+    ],
+    "Smartness": 18,
+    "Coolness": 0,
+    "Strongness": 2,
+    "Health": 19,
+    "Gold": 30,
+    "Color": "19e745",
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "No blessing"
+  },
+  "Ivanovich": {
+    "Name": "Ivanovich",
+    "Strongness": 5,
+    "Coolness": 4,
+    "Smartness": 2,
+    "Traits": [
+      "**Irish**:  Can summon potatoes and Guinness, and can also see leprechauns out of the corner of their eye.",
+      "**Vampire**:  Recovers health when attacking people, assuming they can get close enough to drink their blood."
+    ],
+    "Inventory": [
+      "Collector's Edition Guinness Beer Stein",
+      "Rigged Dice",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Bloat Level II**: ????",
+    "Color": "26ed73",
+    "Health": 11,
+    "Gold": 31,
+    "Backstory": "The grandson of Dmitriyev. I think that probably makes him a bear?"
+  },
+  "JOG": {
+    "Name": "JOG MANSEN",
+    "Strongness": 2,
+    "Coolness": 8,
+    "Smartness": 8,
+    "Traits": [
+      "**Honest**: Completely honest in every situation. Cannot tell a lie.",
+      "**Leader**:  All other party members receive +1 to all stats while the leader is in the party. If this character dies, other party members receive a permanent -1 to all stats."
+    ],
+    "Inventory": [
+      "Wand",
+      "Koran",
+      "Shield"
+    ],
+    "Blessing": "**Domination Level II**: ????",
+    "Color": "db396c",
+    "Health": 3,
+    "Gold": "0",
+    "Backstory": "JOG MANSEN\u2019s sole mission is to get every NPC to change their name to JOG to create the army of JOG to do his bidding. He has been doing pretty well for himself, creating a new wizard school named JOGwarts with his army of 1000 JOGs that knocked Hogwarts out of business."
+  },
+  "JOGSAMPSEN": {
+    "Traits": [
+      "**Schizophrenic**  - Hears voices sometimes...",
+      "**Hexxer**  - Able to call upon departed spirits, and ancient dieties to curse one's enemies"
+    ],
+    "Blessing": "**Blessing of Wedding Planner:** JOG SAMPSEN can force any two characters to get married on demand. Due to Schizophrenic, the voices will tell JOG to immediately do this to 2 random characters in the area upon being encountered.",
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Name": "JOG SAMPSEN",
+    "Backstory": "He once worked for HOG BRANSEN, but JOG convinced him to change sides. On the road to El Dorado, he discovered his true passion: wedding planning. The voices tell him their favorite ships and he makes them a reality.",
+    "Health": 11,
+    "Gold": 0,
+    "Strongness": 10,
+    "Smartness": 12,
+    "Coolness": 4,
+    "Color": "cccf7a"
+  },
+  "JOGSOLO": {
+    "Traits": [
+      "**In Love** - In love with another Hero. While that Hero is alive, all stats are raised by 2. When that party member dies, trait becomes Suicidal.",
+      "**Elementalist**  - Controls the pure forms of elements (Periodic Table), and is able to purify/separate any (inanimate) object into its base elements."
+    ],
+    "Blessing": "**No blessing**",
+    "Inventory": [
+      "Bhagavad Gita",
+      "Empty slot",
+      "Shield"
+    ],
+    "Name": "JOG SOLO",
+    "Backstory": "JOG MANSEN is his loving husband. After traumatically having his mouth stolen, JOG SOLO got 16 extra mouths at El Dorado which are now all over his body.",
+    "Health": 5,
+    "Gold": 27,
+    "Strongness": 18,
+    "Smartness": 10,
+    "Coolness": 10,
+    "Color": "265ade"
+  },
+  "Jacques": {
+    "Backstory": "Oh my god! It's Chad Gaylord Smith's long lost twin sibling!!! What a coincidence that they have showed up just now!",
+    "Name": "Jacques Fatality Theron",
+    "Traits": [
+      "**Yakromancer**:  Able to make yaks appear from nowhere, as well as turn into a yak.",
+      "**Meme**:  Makes the character more annoying, but when doing anything on the internet, their rolls are doubled due to their meme status."
+    ],
+    "Smartness": 7,
+    "Coolness": 1,
+    "Strongness": 2,
+    "Health": 5,
+    "Gold": 44,
+    "Color": "f8f040",
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "No blessing"
+  },
+  "Kim": {
+    "Name": "Kim Jong Dos",
+    "Strongness": 5,
+    "Coolness": 6,
+    "Smartness": 0,
+    "Traits": [
+      "**Copycat**: Copies the trait of any nearby character. The person that they copy off of changes every world.",
+      "**French**: Can pull french wine and baguettes out of nowhere. Has a speech impediment where they only pronounce vowels (and even then, only half of them)"
+    ],
+    "Inventory": [
+      "Iron Fist of the Golden Ruler",
+      "Mace and Chain",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Bloat Level I**: ???",
+    "Color": "cbbbb7",
+    "Health": 110,
+    "Gold": 9,
+    "Backstory": "The Mexican stepbrother of dictator Kim Jong Un."
+  },
+  "Leandra": {
+    "Backstory": "A child that enjoys cosplaying as Death and saying random creepy things. She was the computer girl for ISIS, but then she went to JOGwarts and became a wizard.",
+    "Name": "Leandra Erk",
+    "Traits": [
+      "**Hacker**: Can use intelligence to hack into electronics, robots, or even stuff like airplanes.",
+      "**Telepath**:  Reads minds with Intelligence."
+    ],
+    "Smartness": 1,
+    "Coolness": 1,
+    "Strongness": 0,
+    "Health": 1,
+    "Gold": 35,
+    "Color": "00c211",
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "No blessing"
+  },
+  "Leopoldo": {
+    "Backstory": "Grew up in an inner city neighborhood. Dislikes cottage cheese. Definitely not secretly a lizard person.",
+    "Name": "Leopoldo Pedro Raven",
+    "Traits": [
+      "**Trick Room**:  Can invert the stats of all characters in the vicinity. (Stats become 10 minus that stat, so a stat of 1 would become 10, a stat of 5 would stay the same, and a stat of 11 would become ",
+      "**Inventor**:  Can spontaneously create idiotic (but still functional) inventions with random crap they find on the ground."
+    ],
+    "Smartness": 3,
+    "Coolness": 2,
+    "Strongness": 1,
+    "Health": 3,
+    "Gold": 57,
+    "Color": "1c548b",
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Rotten Meat"
+    ],
+    "Blessing": "No blessing"
+  },
+  "Liam": {
+    "Name": "Liam Payne",
+    "Strongness": 10,
+    "Coolness": 12,
+    "Smartness": 8,
+    "Traits": [
+      "**Junkie**:  Taking a new drug raises imagination by one.",
+      "**Magnemancer**:  Has magnetic powers; strength can be used to attract or repel metals."
+    ],
+    "Inventory": [
+      "Summon Tornado",
+      "Whiskey",
+      "Dorito Gun"
+    ],
+    "Blessing": "**Blessing of Boy Band** - Attacks deal base 1000 damage against anyone who is under the age of 18; gains a +10 Coolness modifier in checks against them..",
+    "Color": "b1d45a",
+    "Health": 9,
+    "Gold": 0,
+    "Backstory": "Liam is known as the dude who made the most transcendent album of all time. He tries to keep a low profile nowadays, mostly because he is mobbed by teenage girls whenever he goes outside."
+  },
+  "Luis": {
+    "Backstory": "He and Daddy Yankee were ultimately unable to get over their Dorito-related differences. The ensuing war has killed millions of people.",
+    "Name": "Luis Fonsi",
+    "Traits": [
+      "**Beast Hunter**:  During boss fights, all of this player's stats are raised by 5.",
+      "**Loyal Pet**:  Has a helpful animal friend that serves as a backup life. (Its stat total is 6 instead of 11.)"
+    ],
+    "Smartness": 6,
+    "Coolness": 8,
+    "Strongness": 8,
+    "Health": 16,
+    "Gold": 49,
+    "Color": "82c9ed",
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Nacho Cheese**: Leads the Nacho Cheese army."
+  },
+  "Magahet": {
+    "Name": "Magahet",
+    "Strongness": 4,
+    "Coolness": 5,
+    "Smartness": 1,
+    "Traits": [
+      "**Telepath** - Reads minds with Smartness.",
+      "**Blind** :  Can't see. They have super hearing I guess, but why would you want this. "
+    ],
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "**No blessing**: ????",
+    "Color": "56dca7",
+    "Health": 9,
+    "Gold": 67,
+    "Backstory": "MAGA for Republican. Het for heterosexual. They were once a nurse before they found Augustus, the love of their life, who proceeded to get them a 10-year prison sentence. Now they are a plastic surgeon, who still gets idiot customers despite being blind."
+  },
+  "Morty": {
+    "Name": "Morty P. Sherman III",
+    "Strongness": 10,
+    "Coolness": 2,
+    "Smartness": 14,
+    "Traits": [
+      "**Infinivore**:  Can eat anything, temporarily gaining the characteristics of whatever they ate.",
+      "**Immune**:  Immune to any disease."
+    ],
+    "Inventory": [
+      "Mouth Stealer",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Veggie Tales**: Morty can transform vegetables into NPCs at will.",
+    "Color": "5d1a9c",
+    "Health": 9,
+    "Gold": 0,
+    "Backstory": "A hero who resurrected Rick Sanchez from the form of a pickle. He has realized that he no longer needs friends, just vegetables."
+  },
+  "Otis": {
+    "Backstory": "A 70 year old fat man from Minnesota who is in love with Morty. Morty refuses to marry him and Otis is very upset about it.",
+    "Name": "Otis Phil",
+    "Traits": [
+      "**Inventor**:  Can spontaneously create idiotic (but still functional) inventions with random crap they find on the ground.",
+      "**Stealth**:  This character can sneak around without being seen and listen in on others."
+    ],
+    "Smartness": 1,
+    "Coolness": 3,
+    "Strongness": 0,
+    "Health": 1,
+    "Gold": 28,
+    "Color": "2af7bd",
+    "Inventory": [
+      "Sack of Balls",
+      "Sonic the Hedgehog 2 Video Game",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Bloat** Level I"
+  },
+  "Pinkbeard": {
+    "Backstory": "Pinkbeard changes her gender every day. She has invented 74 new genders in order to change her gender more.",
+    "Name": "Pinkbeard the Vegetarian",
+    "Traits": [
+      "**Pyromancer**:  Able to conjure fireballs at will. These can be used as projectile weapons, lanterns, cooking fires, etc... The pyromancer is also immune to any fire they caused",
+      "**Voidmage**:  Able to tap the latent powers of the void found within the shadows. Causes insanity. (Lovecraftian eldritch powers)"
+    ],
+    "Smartness": 2,
+    "Coolness": 2,
+    "Strongness": 0,
+    "Health": 1,
+    "Gold": 25,
+    "Color": "df5137",
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Makeup Level II**: You are never beautiful enough. You randomly and uncontrollably shapeshift every so often. This may affect your stats."
+  },
+  "Savanna": {
+    "Backstory": "Despite streaming on Twitch for 10 years, they have never garnered more than 5 viewers. And one of them is their stalker so it's really 4.",
+    "Name": "Savanna Gregg",
+    "Traits": [
+      "**Second Try**: Upon death, resurrects as a 1/1/1 with double stat gains.",
+      "**Achilles' Heel**:  Strength and all strength gains are doubled, but being hit in a weak spot will instantly kill the character."
+    ],
+    "Smartness": 0,
+    "Coolness": 0,
+    "Strongness": 12,
+    "Health": 13,
+    "Gold": 15,
+    "Color": "664ef0",
+    "Inventory": [
+      "Teenager's Elbow",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "No blessing"
+  },
+  "Svetlana": {
+    "Backstory": "Some jackass stole their trusty Bagpipe. Now they seek revenge.",
+    "Name": "Svetlana Datura Acey",
+    "Traits": [
+      "**Second Try**:  Upon death, resurrects as a 1/1/1 with double stat gains",
+      "**Scottish**:  Always carries their trusty bagpipe, and can make a wonderful haggis out of the entrails of their enemies"
+    ],
+    "Smartness": 5,
+    "Coolness": 2,
+    "Strongness": 2,
+    "Health": 5,
+    "Gold": 34,
+    "Color": "2d4d60",
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Drumset"
+    ],
+    "Blessing": "No blessing"
+  },
+  "Thomas": {
+    "Name": "Thomas the Tank Engine",
+    "Strongness": 1,
+    "Coolness": 2,
+    "Smartness": 3,
+    "Traits": [
+      "**Meteorologist** - Has the ability to alter the weather at will (within reason).",
+      "**Metal Skin**  - Skin is made of some sort of metal (ex. steel, lead, or gold). Receives a health boost and some effects based on the type of metal. Still takes normal damage."
+    ],
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "**Blessing of Ogre Level I**: ????",
+    "Color": "99d997",
+    "Health": 11,
+    "Gold": 0,
+    "Backstory": "i like trains."
+  },
+  "Topham": {
+    "Backstory": "He was looking for a female train as all the trains on the Island of Sodor are male, then he was transformed into an ogre and then into a human, and now he is the leader of all the trains. After this adventure, he became a member of ISIS and then joined JOG MANSEN to reach El Dorado.",
+    "Name": "Topham Hatt",
+    "Traits": [
+      "**Meteorologist**:  Has the ability to alter the weather at will (within reason).",
+      "**Metal Skin**:  Skin is made of some sort of metal (ex. steel, lead, or gold). Receives a health boost and some effects based on the type of metal. Still takes normal damage."
+    ],
+    "Smartness": 5,
+    "Coolness": 0,
+    "Strongness": 6,
+    "Health": 11,
+    "Gold": 0,
+    "Color": "047631",
+    "Inventory": [
+      "Boxcar of Weapons and Ammo",
+      "Item Spawner",
+      "Patent #63440"
+    ],
+    "Blessing": "No blessing"
+  },
+  "Vena": {
+    "Backstory": "A proud member of ISIS and follower of JOG MANSEN. Who knows what her mission is.",
+    "Name": "Vena Wilburn",
+    "Traits": [
+      "**Visions**:  Gets random visions of the future that are guaranteed to happen.",
+      "**American**:  Has access to a plethora of guns, is MORBIDLY obese, and has 2 intelligence subtracted baseline (points can still be allocated to even it out)"
+    ],
+    "Smartness": 6,
+    "Coolness": 1,
+    "Strongness": 2,
+    "Health": 5,
+    "Gold": 25,
+    "Color": "bdcafd",
+    "Inventory": [
+      "Empty slot",
+      "Empty slot",
+      "Empty slot"
+    ],
+    "Blessing": "No blessing"
+  }
+}

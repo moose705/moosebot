@@ -1,5 +1,6 @@
 import shared_functions
 import items
+import traits
 import discord
 
 from shared_functions import party as party
@@ -31,14 +32,11 @@ def change_character_data(name, data, value):
     character[data] = value
 
 
-def print_character(name, character=None):
-    """Given the name of a character which is either in the party or npc dictionaries, returns an Embed object with all of their relevant qualities.
-    
-    An optional character option can be used to override the function's attempts to search and pass this function the dictionary."""
+def print_character(name):
+    """Given the name of a character which is either in the party or npc dictionaries, returns an Embed object with all of their relevant qualities."""
+    character = shared_functions.find_character(name)
     if not character:
-        character = shared_functions.find_character(name)
-        if not character:
-            return discord.Embed(title="Invalid character")
+        return discord.Embed(title="Invalid character")
     embed = discord.Embed(title=character["Name"], description=character["Backstory"],
                           color=int(character["Color"], 16))
     embed.add_field(name="**Strongness**", value=character["Strongness"])
@@ -46,17 +44,28 @@ def print_character(name, character=None):
     embed.add_field(name="**Coolness**", value=character["Coolness"])
     embed.add_field(name="**Health**", value=character["Health"])
     embed.add_field(name="**Gold**", value=character["Gold"])
-    # TODO: When printing traits, use the trait method
-    # TODO: Add support for third trait
-    embed.add_field(name="__**Traits**__", value=character["Traits"][0] + "\n" + character["Traits"][1])
-    embed.add_field(name="__**Blessing**__", value=character["Blessing"])
+    traits_field = ""
+    for trait in character["Traits"]:
+        try:
+            traits_field += traits.trait_dict[trait].print() + "\n"
+        except KeyError:
+            traits_field += traits.boss_trait_dict[trait].print() + "\n"
+    embed.add_field(name="__**Traits**__", value=traits_field)
+    # TODO: Implement support in print_character for blessings that aren't unlocked.
+    #  None are currently implemented, so it can wait.
+    if character["Blessing"] in traits.blessing_dict:
+        embed.add_field(name="__**Blessing**__", value=traits.blessing_dict[character["Blessing"]].print())
+    else:
+        if character["Blessing"] != "No blessing":
+            embed.add_field(name="__**Blessing**__", value="**" + character["Blessing"] + "**: ????")
     inventory_string = ""
-    # TODO: If character is an NPC, hide their inventory unless an item is revealed. Need an NPC attribute.
-    # this can be done i think by adding a "Hidden" attribute to the item class, and making it default on NPCs
     for item in character["Inventory"]:
         if item != "Empty slot":
-            item = items.item_dict[item]
-            inventory_string += "- " + item.print() + "\n"
+            if name in npcs.keys():
+                inventory_string += "**Unknown item**: ???\n"
+            else:
+                item = items.item_dict[item]
+                inventory_string += "- " + item.print() + "\n"
         else:
             inventory_string += "- Empty slot\n"
     embed.add_field(name="__**Inventory**__", value=inventory_string)
@@ -66,33 +75,11 @@ def print_character(name, character=None):
 
 @bot.command(name='changechar')
 async def change_char(ctx, name, quality, value):
-    # TODO: Call changetrait for Trait1, Trait2, Trait3, Blessing
-    # TODO: Print an error message if you try to change item or inventory
     value = value.replace("±", " ")
+    if quality in ["Traits", "Blessing", "Inventory"]:
+        await ctx.send("You're using the wrong command for this (try %changetrait, %changeblessing, %additem, "
+                       "%removeitem)")
+        return
     change_character_data(name, quality, value)
     response = print_character(name)
     await ctx.send(embed=response)
-
-
-@bot.command(name='changetrait')
-async def change_trait(ctx, name, old_trait, new_trait):
-    # TODO: Reformat to work with the new trait class dictionary, removing old trait functionality
-    character = shared_functions.find_character(name)
-    if not character:
-        await ctx.send("Party member or NPC not found.")
-        return
-    existing_traits = []
-    for trait in character["Traits"]:
-        existing_traits.append(trait.split(":")[0].replace(" ", "").replace("*", ""))
-    if old_trait not in existing_traits:
-        await ctx.send("Character does not have specified trait to replace.")
-        return
-    traits_dict = shared_functions.get_dict_from_json("traits.json")
-    try:
-        traits_dict[new_trait]
-    except KeyError:
-        await ctx.send("Trait " + new_trait + " does not exist!")
-        return
-    index_to_replace = existing_traits.index(old_trait)
-    character["Traits"][index_to_replace] = "**" + new_trait + "**: " + traits_dict[new_trait]
-    await ctx.send(embed=print_character(name))

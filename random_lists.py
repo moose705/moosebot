@@ -1,3 +1,5 @@
+# TODO: Port backstories to a JSON system allowing them to be easily added and removed by the commands.
+
 Backstories = [
     "Was once a famous gambler, but lost it all and is now on the run from debtors.",
     "Abandoned by their parents at the age of five; now a scavenger and pirate.",

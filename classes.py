@@ -13,27 +13,20 @@ class Trait(BaseObject):
         BaseObject.__init__(self, name, description)
         self.downgrade = downgrade
         self.upgrade = upgrade
+        self.unlocked = True
 
     def active(self):
         pass
 
 
 class Item(BaseObject):
-    def __init__(self, name, description, teaser, damage, quality, uses=-1, hidden=False):
+    def __init__(self, name, description, teaser, damage, quality, item_type):
         BaseObject.__init__(self, name, description)
         self.teaser = teaser
         self.damage = damage
         self.quality = quality
-        self.uses = uses
-        self.hidden = hidden
+        self.type = item_type
         self.last_price = 0
-
-    def print(self):
-        # TODO: Add an additional "shitty print" function using the other description. "Useless print" maybe
-        if self.hidden:
-            return "**Unknown item**: ???"
-        else:
-            return BaseObject.print(self)
 
     def print_teaser(self):
         return "**" + self.name + "**: " + self.teaser
